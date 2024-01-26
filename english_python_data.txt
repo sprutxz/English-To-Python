@@ -1694,7 +1694,7 @@ def cal_density(mass,volume):
     return (mass/volume)
 
 # Write a function to convert the temprature celsius 'c' to fahrenheit 'f' or fahrenheit to celsius
- def temp_converter(temp,temp_given_in = 'f'):
+def temp_converter(temp,temp_given_in = 'f'):
     # Return the converted temprature
     if temp_given_in.lower() == 'f': # Convert to C
         return (temp - 32) * (5/9)
@@ -3309,7 +3309,7 @@ def lcm(x, y):
        greater = x  
    else:  
        greater = y  
-  while(True):  
+   while(True):  
        if((greater % x == 0) and (greater % y == 0)):  
            lcm = greater  
            break  
@@ -5759,8 +5759,7 @@ def encode_marsh(sen : str):
                      '6': '-....', '7': '--...', '8': '---..', '9': '----.',
                      '&': '.-...', "'": '.----.', '@': '.--.-.', ')': '-.--.-', '(': '-.--.',
                      ':': '---...', ',': '--..--', '=': '-...-', '!': '-.-.--', '.': '.-.-.-',
-                     '-': '-....-', '+': '.-.-.', '"': '.-..-.', '?': '..--..', '/': '-..-.'
-                    }
+                     '-': '-....-', '+': '.-.-.', '"': '.-..-.', '?': '..--..', '/': '-..-.' }
     for i in sen:
         print(char_to_dots[i.upper()])
 
@@ -6135,7 +6134,7 @@ def custom_counter():
        nonlocal x
        x += 1
        print(f' Switch or button is called {x} times')
-     return inner
+    return inner
 
 
 #63 custom logging along with counter
@@ -6149,7 +6148,7 @@ def custom_counter_log():
        nonlocal x
        x += 1
        print(f' Switch or button is called {x} at {dt}')
-     return inner
+    return inner
 
 #64 function to build a time elapsed closures
 def time_elsaped()
@@ -6835,14 +6834,14 @@ print('\ngenerator_yield:     ', end='')
 %timeit test_generator_yield(generator_yield)
 
 # Public vs. private class methods and name mangling
-    def public_method(self):
-        print('Hello public world!')
+def public_method(self):
+    print('Hello public world!')
 
-    def __private_method(self):
-        print('Hello private world!')
+def __private_method(self):
+    print('Hello private world!')
 
-    def call_private_method_in_class(self):
-        self.__private_method()
+def call_private_method_in_class(self):
+    self.__private_method()
 
 
 my_instance = my_class()
@@ -7367,23 +7366,23 @@ vowel = ['a', 'e', 'i', 'o', 'u']
 
 # write a python program to give the next fibonacci number
 
-    num_1, num_2,count = 0, 1,0
+num_1, num_2,count = 0, 1,0
 
-    def next_fibbonacci_number() :
-    
-        nonlocal num_1, num_2, count
+def next_fibbonacci_number() :
 
-        if(count == 0):
-            count+=1
-            return 0
-        elif(count==1):
-            count+=1
-            return num_2
-        else:
-            num_1, num_2 = num_2, num_1+num_2
-            return num_2
+    nonlocal num_1, num_2, count
 
-    return next_fibbonacci_number
+    if(count == 0):
+        count+=1
+        return 0
+    elif(count==1):
+        count+=1
+        return num_2
+    else:
+        num_1, num_2 = num_2, num_1+num_2
+        return num_2
+
+return next_fibbonacci_number
 # write a python function to calculate factorial of a given number
 def factorial(n):
     fact = 1
@@ -8655,9 +8654,9 @@ count_odd = 0
 count_even = 0
 for x in numbers:
         if not x % 2:
-    	     count_even+=1
+             count_even+=1
         else:
-    	     count_odd+=1
+             count_odd+=1
              
 #Write a Python program that prints each item and its corresponding type from the following list.
 
@@ -13397,9 +13396,9 @@ if l == sub_list:
 else:
   print(False)  
   
- #52 write a python program to update a dictionary with the values from a dictionary list and print it
- 
- test_dict = {"Gfg" : 2, "is" : 1, "Best" : 3} 
+#52 write a python program to update a dictionary with the values from a dictionary list and print it
+
+test_dict = {"Gfg" : 2, "is" : 1, "Best" : 3} 
   
 # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
@@ -15373,7 +15372,7 @@ for num in range(lower, upper + 1):
        for i in range(2, num):
            if (num % i) == 0:
                 break
-    else:
+   else:
         print(num)
 
 # write a python program to check if a number is prime or not
@@ -16945,8 +16944,8 @@ elif num == 0:
 else:
    print("Negative number")
 
- #11. Python Program to Check if a Number is Odd or Even
- num = int(input("Enter a number: "))
+#11. Python Program to Check if a Number is Odd or Even
+num = int(input("Enter a number: "))
 if (num % 2) == 0:
    print("{0} is Even".format(num))
 else:
@@ -17178,14 +17177,14 @@ print("The ASCII value of '" + c + "' is", ord(c))
 def compute_hcf(x, y):
 
 # choose the smaller number
-    if x > y:
-        smaller = y
-    else:
-        smaller = x
-    for i in range(1, smaller+1):
-        if((x % i == 0) and (y % i == 0)):
-            hcf = i 
-    return hcf
+if x > y:
+    smaller = y
+else:
+    smaller = x
+for i in range(1, smaller+1):
+    if((x % i == 0) and (y % i == 0)):
+        hcf = i 
+return hcf
 
 num1 = 54 
 num2 = 24
@@ -17197,14 +17196,14 @@ print("The H.C.F. is", compute_hcf(num1, num2))
 def compute_hcf(x, y):
 
 # choose the smaller number
-    if x > y:
-        smaller = y
-    else:
-        smaller = x
-    for i in range(1, smaller+1):
-        if((x % i == 0) and (y % i == 0)):
-            hcf = i 
-    return hcf
+if x > y:
+    smaller = y
+else:
+    smaller = x
+for i in range(1, smaller+1):
+    if((x % i == 0) and (y % i == 0)):
+        hcf = i 
+return hcf
 
 #31. Write a python function to find HCf or GCD and return the value using euclidian Algorithm
 def compute_hcf(x, y):
@@ -18004,8 +18003,8 @@ elif num == 0:
 else:
    print("Negative number")
 
- #11. Python Program to Check if a Number is Odd or Even
- num = int(input("Enter a number: "))
+#11. Python Program to Check if a Number is Odd or Even
+num = int(input("Enter a number: "))
 if (num % 2) == 0:
    print("{0} is Even".format(num))
 else:
@@ -18237,14 +18236,14 @@ print("The ASCII value of '" + c + "' is", ord(c))
 def compute_hcf(x, y):
 
 # choose the smaller number
-    if x > y:
-        smaller = y
-    else:
-        smaller = x
-    for i in range(1, smaller+1):
-        if((x % i == 0) and (y % i == 0)):
-            hcf = i 
-    return hcf
+if x > y:
+    smaller = y
+else:
+    smaller = x
+for i in range(1, smaller+1):
+    if((x % i == 0) and (y % i == 0)):
+        hcf = i 
+return hcf
 
 num1 = 54 
 num2 = 24
@@ -18256,14 +18255,14 @@ print("The H.C.F. is", compute_hcf(num1, num2))
 def compute_hcf(x, y):
 
 # choose the smaller number
-    if x > y:
-        smaller = y
-    else:
-        smaller = x
-    for i in range(1, smaller+1):
-        if((x % i == 0) and (y % i == 0)):
-            hcf = i 
-    return hcf
+if x > y:
+    smaller = y
+else:
+    smaller = x
+for i in range(1, smaller+1):
+    if((x % i == 0) and (y % i == 0)):
+        hcf = i 
+return hcf
 
 #31. Write a python function to find HCf or GCD and return the value using euclidian Algorithm
 def compute_hcf(x, y):
@@ -20843,7 +20842,7 @@ def Cumulative(lists):
     return cu_list[1:]
  
 
- # Write a python program to print if a string "hello" is present in the list
+# Write a python program to print if a string "hello" is present in the list
 l = [1, 2.0, 'hello','have', 'a', 'good', 'day'] 
   
 s = 'hello'  
@@ -24513,7 +24512,7 @@ def Cumulative(lists):
     return cu_list[1:]
  
 
- # Write a python program to print if a string "hello" is present in the list
+# Write a python program to print if a string "hello" is present in the list
 l = [1, 2.0, 'hello','have', 'a', 'good', 'day'] 
   
 s = 'hello'  
@@ -27570,7 +27569,7 @@ def Cumulative(lists):
     return cu_list[1:]
  
 
- # Write a python program to print if a string "hello" is present in the list
+# Write a python program to print if a string "hello" is present in the list
 l = [1, 2.0, 'hello','have', 'a', 'good', 'day'] 
   
 s = 'hello'  
@@ -32867,10 +32866,10 @@ numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) # Declaring the tuple
 count_odd = 0
 count_even = 0
 for x in numbers:
-if not x % 2:
-count_even+=1
-else:
-count_odd+=1
+    if not x % 2:
+        count_even+=1
+    else:
+        count_odd+=1
 print("Number of even numbers :",count_even)
 print("Number of odd numbers :",count_odd)
 
@@ -34511,7 +34510,7 @@ def hcf(x, y):
 
    return lcm
    
- # write a python function to check whether the number is an Armstrong number or not
+# write a python function to check whether the number is an Armstrong number or not
  def Armstrong(num):
     sum = 0
     temp = num
@@ -34525,7 +34524,7 @@ def hcf(x, y):
     else:
        print(num,"is not an Armstrong number")
        
- # write a python function to check whether the string is a palindrome or not
+# write a python function to check whether the string is a palindrome or not
  def palindrome(my_str):
     my_str = my_str.casefold()
     rev_str = reversed(my_str)
@@ -34775,21 +34774,21 @@ def isLucky(n):
       
 # write a python program to demonstarate working of map
   
-  def addition(n): 
+def addition(n): 
     return n + n   
-  numbers = (1, 2, 3, 4) 
-  result = map(addition, numbers) 
-  print(list(result)) 
+numbers = (1, 2, 3, 4) 
+result = map(addition, numbers) 
+print(list(result)) 
   
 # write a python function to calculate simple interest
   
-  def simple_interest(p,t,r):  
-    si = (p * t * r)/100    
-    return si 
+def simple_interest(p,t,r):  
+   si = (p * t * r)/100    
+   return si 
     
- # write a python function to calculate compound interest
+# write a python function to calculate compound interest
  
- def compound_interest(principle, rate, time): 
+def compound_interest(principle, rate, time): 
     Amount = principle * (pow((1 + rate / 100), time)) 
     CI = Amount - principle 
     print("Compound interest is", CI) 
@@ -35269,7 +35268,7 @@ def BetrothedNumbers(n) :
   
     return pNext; 
     
- # write a python function to print the raceman sequence
+# write a python function to print the raceman sequence
  
  def recaman(n): 
     arr = [0] * n  
@@ -35284,7 +35283,7 @@ def BetrothedNumbers(n) :
         arr[i] = curr 
         print(arr[i], end=", ") 
 
- # write a python function to print the sylvester's sequence
+# write a python function to print the sylvester's sequence
  
  def printSequence(n) : 
     a = 1
@@ -35298,7 +35297,7 @@ def BetrothedNumbers(n) :
         ans = (ans + 1) % N 
         i = i + 1
           
- # write a python function to find the sum of two numbers without using arithematic operators
+# write a python function to find the sum of two numbers without using arithematic operators
  
  def Add(x, y): 
     while (y != 0): 
@@ -35307,7 +35306,7 @@ def BetrothedNumbers(n) :
         y = carry << 1     
     return x 
  
-  # write a python function to subtract two numbers without using arithemmatic operators
+# write a python function to subtract two numbers without using arithemmatic operators
   
   def subtract(x, y):  
     while (y != 0): 
@@ -35317,7 +35316,7 @@ def BetrothedNumbers(n) :
       
     return x 
 
- # write a python function to find the smallest number to be subtracted from a given number to make the given number palindrome
+# write a python function to find the smallest number to be subtracted from a given number to make the given number palindrome
  
 def minSub(N):
     count = 0
@@ -35334,7 +35333,7 @@ def minSub(N):
         N -= 1
     print(count)
     
- # write a python function to check whether the number is a perfect square without finding square root
+# write a python function to check whether the number is a perfect square without finding square root
  
  def isPerfectSquare(n) :
     i = 1
@@ -35344,7 +35343,7 @@ def minSub(N):
         i = i + 1
     return False
     
- # write a python function to find the square root of a number using babylonian method
+# write a python function to find the square root of a number using babylonian method
  
  def squareRoot(n): 
         x = n 
@@ -35387,7 +35386,7 @@ def minSub(N):
         return rev - 1;           
     return rev;  
 
- # write a python function to find all the sexy primes in a given range
+# write a python function to find all the sexy primes in a given range
 
 def sexyprime(l, r) : 
     prime=[True] * (r + 1) 
@@ -35401,7 +35400,7 @@ def sexyprime(l, r) :
         if (prime[i] and prime[i + 6]) : 
             print("(", i , ",", i + 6,")", end="") 
             
- # write a python function to check whether the number is a duck number or not
+# write a python function to check whether the number is a duck number or not
  
 def check_duck(num) : 
     n = len(num)   
@@ -35414,13 +35413,13 @@ def check_duck(num) :
         i = i + 1
     return False
     
- # write a python function to check whether the given number is a Buzz number or not
+# write a python function to check whether the given number is a Buzz number or not
  
  def isBuzz(num) : 
   
     return (num % 10 == 7 or num % 7 == 0)  
   
- # write a python function to check whether the number is a nude number or not
+# write a python function to check whether the number is a nude number or not
   
   def checkDivisbility(num): 
     digit = 0
@@ -35432,7 +35431,7 @@ def check_duck(num) :
             return False
     return True
     
- # write a python function to check whether the number is a ugly number or not
+# write a python function to check whether the number is a ugly number or not
  
  def isUgly(n): 
     if (n == 1): 
@@ -35447,7 +35446,7 @@ def check_duck(num) :
         return (isUgly(n // 5)) 
     return 0
     
- # write a python function to write a prime number as the sum of two composite numbers
+# write a python function to write a prime number as the sum of two composite numbers
  
  def findNums(n): 
     if (n <= 11): 
@@ -35462,12 +35461,12 @@ def check_duck(num) :
     else: 
         print("9 ", n - 9, end = " ") 
         
- # write a python function to print two composite numbers whose difference is N
+# write a python function to print two composite numbers whose difference is N
  
  def find_composite_nos(n) :  
     print(9 * n, 8 * n);  
     
- # write a python function to print N-bonacci series
+# write a python function to print N-bonacci series
  
  def bonacciseries(n, m) :  
     a = [0] * m 
