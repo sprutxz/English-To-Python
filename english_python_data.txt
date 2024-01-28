@@ -5740,7 +5740,7 @@ def show_ascii(a: str):
 #20 function to print calendar
 def show_mm_calendar(mm: int, yyyy: int):
     import calendar
-    print(calendar.month(yyyy, mm)
+    print(calendar.month(yyyy, mm))
 
 
 #21 Create a function that takes a list of numbers between 1 and 10 (excluding one number) and returns the missing number.
@@ -7362,7 +7362,7 @@ def fiboacci_number_check(n):
 # write a python program to strip all the vowels in a string
 string = "Remove Vowel"
 vowel = ['a', 'e', 'i', 'o', 'u']
-"".join([i for i in string if i not in vowel]
+"".join([i for i in string if i not in vowel])
 
 # write a python program to give the next fibonacci number
 
@@ -8980,14 +8980,14 @@ Celsius = (Fahrenheit - 32) * 5.0/9.0
 a=6
 print(bin(a))
 
-#26 write a python function to convert from base 2 to base 10 in pythonpython by TheRubberDucky on Nov 06 2020 Donate
+#26 write a python function to convert from base 2 to base 10 in python
 def getBaseTen(binaryVal):
     count = 0
 
     binaryVal = binaryVal[::-1]
 
-	for i in range(0, len(binaryVal)):
-    	if(binaryVal[i] == "1"):
+    for i in range(0, len(binaryVal)):
+        if(binaryVal[i] == "1"):
             count += 2**i
     
     return count
@@ -9526,7 +9526,7 @@ def to_string(n,base):
    if n < base:
       return conver_tString[n]
    else:
-      return to_string(n//base,base) + conver_tString[n % base
+      return to_string(n//base,base) + conver_tString[n % base]
 
 #77 Write a Python function to calculate the geometric sum of n-1.
 def geometric_sum(n):
@@ -9580,7 +9580,7 @@ if (a!=0.0):
         print("The root1 is: ", rp, "+ i",ip)
         print("The root2 is: ", rp, "- i",ip)
 else:
-    print("Not a quadratic equation."
+    print("Not a quadratic equation.")
 
 #81 Write a Python program to convert a given Bytearray to Hexadecimal string.
 def bytearray_to_hexadecimal(list_val):
@@ -32903,7 +32903,7 @@ for i in range(100, 401):
 s = str(i)
 if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0):
 items.append(s)
-print( ",".join(items
+print( ",".join(items))
 
 
 # Write a Python program to create the multiplication table (from 1 to 10) of a number.
@@ -33169,7 +33169,7 @@ dct[i] = dct.get(i,0) + 1
 
 dct = sorted(dct.items(),key=lambda x: (-x[1],x[0]))
 for i in dct:
-print(i[0],i[1]
+print(i[0],i[1])
 
 # Write a python program using lambda funtion to square a number
 square2 = lambda num: num * num
@@ -36303,8 +36303,8 @@ def getBaseTen(binaryVal):
 
     binaryVal = binaryVal[::-1]
 
-	for i in range(0, len(binaryVal)):
-    	if(binaryVal[i] == "1"):
+    for i in range(0, len(binaryVal)):
+        if(binaryVal[i] == "1"):
             count += 2**i
     
     return count
@@ -36843,7 +36843,7 @@ def to_string(n,base):
    if n < base:
       return conver_tString[n]
    else:
-      return to_string(n//base,base) + conver_tString[n % base
+      return to_string(n//base,base) + conver_tString[n % base]
 
 #77 Write a Python function to calculate the geometric sum of n-1.
 def geometric_sum(n):
@@ -36897,7 +36897,7 @@ if (a!=0.0):
         print("The root1 is: ", rp, "+ i",ip)
         print("The root2 is: ", rp, "- i",ip)
 else:
-    print("Not a quadratic equation."
+    print("Not a quadratic equation.")
 
 #81 Write a Python program to convert a given Bytearray to Hexadecimal string.
 def bytearray_to_hexadecimal(list_val):
