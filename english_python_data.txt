@@ -725,11 +725,11 @@ def print_time( threadName, delay):
         count += 1
         print("%s: %s" % ( threadName, time.ctime(time.time()) ))
 
-# try:
-#     Thread(target=print_time, args=("Thread-1", 2, )).start() 
-#     Thread(target=print_time, args=("Thread-1", 4, )).start() 
-# except:
-#     print("Error: unable to start thread")
+try:
+    Thread(target=print_time, args=("Thread-1", 2, )).start() 
+    Thread(target=print_time, args=("Thread-1", 4, )).start() 
+except:
+    print("Error: unable to start thread")
 
 # write a python program to check a num is less than 1000
 def near_thousand(n):
@@ -2600,7 +2600,7 @@ def Remove(tuples):
     tuples = filter(None, tuples) 
     return tuples 
   
-# Driver Code 
+
 tuples = [(), ('ram','15','8'), (), ('laxman', 'sita'),  
           ('krishna', 'akbar', '45'), ('',''),()] 
 print Remove(tuples)
@@ -2740,9 +2740,7 @@ def convert24(str1):
         return str(int(str1[:2]) + 12) + str1[2:8] 
   
          
-print(convert24("08:05:45 PM"))  # Driver Code  
-
-#19 write a program to find the difference between two times 
+print(convert24("08:05:45 PM"))  
   
   
 # function to obtain the time in minutes form 
@@ -2770,7 +2768,7 @@ def difference(h1, m1, h2, m2):
   
     print(h, ":", m) 
   
-# Driver's code 
+ 
 if __name__ == "__main__": 
       
     difference(7, 20, 9, 45) 
@@ -2779,23 +2777,16 @@ if __name__ == "__main__":
     
 #20 write program to find yesterday, today and tomorrow 
   
-# Import datetime and timedelta 
-# class from datetime module 
-from datetime import datetime, timedelta 
+
+from datetime import datetime, timedelta #Import datetime and timedelta class from datetime module
+
+presentday = datetime.now() # or presentday = datetime.today() # Get today's date 
+
+yesterday = presentday - timedelta(1) # Get Yesterday
+
+tomorrow = presentday + timedelta(1) # Get Tomorrow 
   
-  
-# Get today's date 
-presentday = datetime.now() # or presentday = datetime.today() 
-  
-# Get Yesterday 
-yesterday = presentday - timedelta(1) 
-  
-# Get Tomorrow 
-tomorrow = presentday + timedelta(1) 
-  
-  
-# strftime() is to format date according to 
-# the need by converting them to string 
+
 print("Yesterday = ", yesterday.strftime('%d-%m-%Y')) 
 print("Today = ", presentday.strftime('%d-%m-%Y')) 
 print("Tomorrow = ", tomorrow.strftime('%d-%m-%Y')) 
@@ -2804,22 +2795,19 @@ print("Tomorrow = ", tomorrow.strftime('%d-%m-%Y'))
   
 import re 
   
-# initialising string 
-ini_string = "123abcjw:, .@! eiw"
+ini_string = "123abcjw:, .@! eiw" # initialising string 
   
-# printing initial string 
-print ("initial string : ", ini_string) 
+print ("initial string : ", ini_string) # printing initial string 
   
 result = re.sub('[\W_]+', '', ini_string) 
   
-# printing final string 
-print ("final string", result) 
+print ("final string", result) # printing final string 
 
 #22 write a program to merge dict using update() method
 def Merge(dict1, dict2):
     return(dict2.update(dict1))
      
-# Driver code
+
 dict1 = {'a': 10, 'b': 8}
 dict2 = {'d': 6, 'c': 4}
  
@@ -2833,7 +2821,7 @@ def printWords(s):
     for word in s:  
         if len(word)%2==0: 
             print(word)  
-# Driver Code  
+ 
 s = "hello world" 
 printWords(s)
 
@@ -2856,8 +2844,7 @@ removeDuplicate(str)
 
 #25 write a program to print Maximum frequency character in String 
   
-# initializing string  
-test_str = "Helloworld"
+test_str = "Helloworld" # initializing string  
   
 print ("The original string is : " + test_str) 
   
@@ -2902,7 +2889,7 @@ def check(string) :
     else : 
         print("No") 
           
-# driver code 
+
 if __name__ == "__main__" : 
   
     string = "101010000111"
@@ -2919,7 +2906,6 @@ def heterogram(input):
      else: 
          print ('No') 
   
-# Driver program 
 if __name__ == "__main__": 
     input = 'Hello World'
     heterogram(input) 
@@ -2934,7 +2920,7 @@ def checkKey(dict, key):
     else: 
         print("Not present") 
   
-# Driver Code 
+
 dict = {'a': 100, 'b':200, 'c':300} 
   
 key = 'b'
@@ -2955,11 +2941,9 @@ else:
     print("No")
 
 #31 write a program that extract words starting with Vowel From A list
-# initializing list 
-test_list = ["have", "a", "good", "one"] 
+test_list = ["have", "a", "good", "one"] # initializing list 
   
-# printing original list 
-print("The original list is : " + str(test_list)) 
+print("The original list is : " + str(test_list)) # printing original list 
   
 res = [] 
 vow = "aeiou"
@@ -2973,9 +2957,8 @@ for sub in test_list:
             break
     if flag: 
         res.append(sub) 
-  
-# printing result  
-print("The extracted words : " + str(res)) 
+   
+print("The extracted words : " + str(res)) # printing result 
 
 #32 write a program to replace vowels by next vowel using list comprehension + zip() 
   
@@ -3030,8 +3013,7 @@ print(most_frequent(List))
 
 #36 write a program insert character after every character pair 
   
-# initializing string  
-test_str = "HellowWorld"
+test_str = "HellowWorld" # initializing string  
 
 print("The original string is : " + test_str) 
 res = ', '.join(test_str[i:i + 2] for i in range(0, len(test_str), 2)) 
@@ -3045,8 +3027,7 @@ def remove(string, i):
     a = string[ : i]  
     b = string[i + 1: ] 
     return a + b 
-     
-# Driver Code 
+
 if __name__ == '__main__': 
       
     string = "HellowWorld"
@@ -3076,7 +3057,7 @@ def checkString(str):
     return flag_l and flag_n 
   
   
-# driver code 
+
 print(checkString('helloworld')) 
 print(checkString('helloworld2020'))
 
@@ -3118,7 +3099,7 @@ def common_data(list1, list2):
                   
     return result 
       
-# driver code 
+
 a = [1, 2, 3, 4, 5] 
 b = [5, 6, 7, 8, 9] 
 print(common_data(a, b)) 
@@ -3351,7 +3332,7 @@ print("The ASCII value of '" + c + "' is",ord(c))
 
 #59 write a program to make a simple calculator
 
-# define functions  
+
 def add(x, y):  
    """This function adds two numbers"""
    return x + y 
@@ -3364,7 +3345,7 @@ def multiply(x, y):
 def divide(x, y): 
    """This function divides two numbers"""  
    return x / y  
-# take input from the user  
+
 print("Select operation.")  
 print("1.Add")  
 print("2.Subtract")  
@@ -3710,17 +3691,14 @@ print "str2: ", str2
 
 #82 write a program to extract the mobile number from the given string in Python
 
-# importing the module
+
 import re
 
-# string
 string='''hello you can call me at 018002089898.'''
 
-# extracting the mobile number
 Phonenumber=re.compile(r'\d\d\d\d\d\d\d\d\d\d\d\d')
 m=Phonenumber.search(string)
 
-# printing the result 
 print('mobile number found from the string : ',m.group())
 
 #83 write a program to Capitalizes the first letter of each word in a string
@@ -3803,8 +3781,8 @@ def variance(X):
         tot = tot + (x - mean)**2
     return tot/len(X)
 
-# main code
-#  a simple data-set 
+
+ 
 sample = [1, 2, 3, 4, 5] 
 print("variance of the sample is: ", variance(sample))
 
@@ -3848,7 +3826,7 @@ print('Value of x: ', x, '\nValue of y: ', y, '\nWOO!! Values SWAPPEDDD')
 
 #91 write a program to check eligibility for voting
 
-# input age
+
 age = int(input("Enter Age : "))
 
 if age>=18:
@@ -7077,7 +7055,7 @@ def catalan(n):
   
     return res 
   
-# Driver Code 
+
 for i in range(10): 
     print (catalan(i))
 
@@ -7633,16 +7611,6 @@ def count_set_bits(n):
 a=[[1,[[2]],[[[3]]]],[[4],5]]
 flatten=lambda l: sum(map(flatten,l),[]) if isinstance(l,list) else [l]
 print(flatten(a))
-
-#
-
-import os
-import nltk
-import string
-from collections import Counter
-from itertools import permutations, combinations, combinations_with_replacement
-
-letters = string.ascii_lowercase
 
 
 # write a python function to print pyramid pattern
@@ -14168,36 +14136,6 @@ for key, val in test_dict.items():
 # printing result 
 print("The extracted keys : " + str(res))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
- 
-
-
-
-
-
-    
-# Driver Code 
 if __name__ == '__main__': 
       
     string = "SchoolofAI"
@@ -25670,7 +25608,6 @@ print(a)
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[28]:
 
 
 # write python function get the unique number of elements from the user given list 
@@ -25684,7 +25621,6 @@ def get_unique_elements(list):
 get_unique_elements(mylist)
 
 
-# In[86]:
 
 
 # write a python function get the maximum number in passed list
@@ -25699,7 +25635,7 @@ def max_check(x):
 print(f'{max_check([2,4,5,7,98])}')
 
 
-# In[88]:
+
 
 
 # write a python function to get the minimum number in passed list
@@ -25714,7 +25650,6 @@ def min_check(x):
 print(f'{min_check([2,4,5,7,98])}')
 
 
-# In[1]:
 
 
 # write a program to reverse the list elemnets
@@ -25723,8 +25658,6 @@ list_ = [40,0,1,29,3]
 rev_list = list_[::-1]
 print(f'reversed list: {rev_list}')
 
-
-# In[7]:
 
 
 # write a progarm to sort the list in assending order
@@ -25742,7 +25675,6 @@ while data_list:
 print(f'assending_order_list: {new_list}')
 
 
-# In[8]:
 
 
 # write a program to sort the list in desending order
@@ -25760,8 +25692,6 @@ while data_list:
 print(f'decending_order_list: {new_list}')
 
 
-# In[11]:
-
 
 # write a python function to sort a list of tuples by the second Item 
   
@@ -25778,14 +25708,11 @@ def Sort_Tuple(tup):
                 tup[j + 1]= temp  
     return tup  
   
-# Driver Code  
 tup =[('for', 24), ('is', 10), ('to', 28),  
       ('goal', 1), ('portal', 20), ('a', 15)]  
         
 Sort_Tuple(tup) 
 
-
-# In[12]:
 
 
 # write a program to insert elemnet in the list after every nth element
@@ -25799,15 +25726,11 @@ while i < len(letters):
 letters
 
 
-# In[22]:
-
 
 # write a program to find sum of elements in list
 total = 0
 print(f'sum: {sum([total + x for x in [1, 2, 3, 4, 5]])}')
 
-
-# In[23]:
 
 
 # write a  program to get th ematched elemnets from two list 
@@ -25816,7 +25739,6 @@ b = [9, 8, 7, 6, 5]
 [i for i, j in zip(a, b) if i == j]
 
 
-# In[24]:
 
 
 # write a  program to get the matched elements from two list 
@@ -25825,7 +25747,6 @@ b = [9, 8, 7, 6, 5]
 [i for i, j in zip(a, b) if i != j]
 
 
-# In[31]:
 
 
 # write a python program to create dictionary from the lists 
@@ -25836,7 +25757,6 @@ d = dict(zip(L1,L2))
 print(f'dictionary:{d}')
 
 
-# In[45]:
 
 
 # write a program to convert given dictonary to list of list key value pairs 
@@ -25846,7 +25766,6 @@ list_key_value = [ [k,v] for k, v in d.items() ]
 print(f'lsit_key_value:{list_key_value}')
 
 
-# In[53]:
 
 
 # write program to Compare two dictionaries and check how many (key, value) pairs are equal
@@ -25857,7 +25776,6 @@ length = len(shared_items)
 print(f'count:{length}')
 
 
-# In[63]:
 
 
 # write a python function get the random number from the given range and square the number
@@ -25875,7 +25793,6 @@ def get_square_of_random_number(min_value,max_value):
 get_square_of_random_number(min_value,max_value)
 
 
-# In[67]:
 
 
 # write a python function to identify the total counts of chars, digits,and symbols for given input string 
@@ -25900,7 +25817,6 @@ print("total counts of chars, digits,and symbols \n")
 findDigitsCharsSymbols(inputString)
 
 
-# In[71]:
 
 
 #  write a python function to find all occurrences of user given substring in user provided input string ignoring the case
@@ -25916,7 +25832,7 @@ substring = "USA"
 count_word_occurrences(inputString,substring)
 
 
-# In[74]:
+
 
 
 # write a program that prints the sum and average of the digits that appear in the string, ignoring all other characters
@@ -25932,7 +25848,7 @@ percentage = totalMarks/len(markList)
 print(f'Total Marks is:{totalMarks},Percentage is:{percentage}')
 
 
-# In[75]:
+
 
 
 # write a python funaction to create a new string by appending second string in the middle of first string
@@ -25946,7 +25862,6 @@ def appendMiddle(s1, s2):
 appendMiddle("bananna", "monkey")
 
 
-# In[81]:
 
 
 # write a program to find the last position of a given substring in a given string
@@ -25957,7 +25872,6 @@ index = str1.rfind("Emma")
 print(f"Last occurrence of Emma starts at {index}")
 
 
-# In[82]:
 
 
 # write a program to remove the empty list from the given list 
@@ -25972,7 +25886,6 @@ print("After removing empty strings")
 print(new_str_list)
 
 
-# In[85]:
 
 
 # write a program from given string replace each punctuation with #
@@ -25991,7 +25904,6 @@ for char in punctuation:
 print(f"The strings after replacement : {str1}")
 
 
-# In[90]:
 
 
 # write a program to convert all the sentances present in the list to upper 
@@ -26000,16 +25912,12 @@ mylis = ['this is test', 'another test']
 print(f'{[item.upper() for item in mylis]}')
 
 
-# In[96]:
-
 
 # write a progarm to adds every 3rd number in a list
 from functools import reduce
 input_list = [x for x in range(10)]
 reduce((lambda x, y: x + y), [val for idx, val in enumerate(input_list) if (idx+1)%3==0])
 
-
-# In[97]:
 
 
 # write a program to strips every vowel from a string provided 
