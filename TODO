@@ -1,2 +1,6 @@
 make a better way to check for loops
+check if the target tokens are right
+better word embeddings
+
+Set up METEOR metric
 Update model eval to beam search
