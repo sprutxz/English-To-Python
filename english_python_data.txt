@@ -5896,8 +5896,8 @@ def dict_in_at_begin(orgin: dict, new_: dict):
 
 
 #34 function to convert a list of tuples into dictionary
-# Input  : [ ('a',1), ('b', 2), ('c', 3)]
-# Output : { 'a':1, 'b':2, 'c':3 }
+ # Input  : [ ('a',1), ('b', 2), ('c', 3)]
+ # Output : { 'a':1, 'b':2, 'c':3 }
 def list_to_dict(l: list):
     final_dict = {}
     for i in l:
@@ -5915,8 +5915,8 @@ def dict_sort_with_key(test_dict: dict):
 
 
 #36 function to return mirir charcters of a letter.
-# Input  : paradox after N = 3
-# Output : paizwlc
+ # Input  : paradox after N = 3
+ # Output : paizwlc
 def mirror_character(word: str, value: int):
     import string
     letters = string.ascii_lowercase
@@ -5935,8 +5935,8 @@ def add_tuple(tup1, tup2):
 
 
 #38 function to create a list of tuples from a given list having number and its cube in each tuple
-# Input  : [1,2,3]
-# Output : [(1,1),(2,8),(3,9)]
+ # Input  : [1,2,3]
+ # Output : [(1,1),(2,8),(3,9)]
 def list_of_tuple( l: list):
     final = [ (i, pow(i,3)) for i in l]
     return final
@@ -6176,7 +6176,7 @@ def unpack_tuple(tup):
 
 
 #69 write a function which take unlimited number and add it
-# Note : Number can be anything
+ # Note : Number can be anything
 def add_unlimited(*args):
     return sum(args)
 
@@ -8167,7 +8167,7 @@ def get_word(data):
     plt.show()
 
 
-# get_word(data="./christmas_carol.txt")
+ # get_word(data="./christmas_carol.txt")
 
 
 # write a python function to sort each item in a data structure on one of the keys
@@ -8542,9 +8542,9 @@ print(d3)
 
 # Write a Python program to print the length of a set.
 
-#Create a set
+ #Create a set
 seta = set([5, 10, 3, 15, 2, 20])
-#Find the length use len()
+ #Find the length use len()
 print(len(seta))
 
 # write a python program that takes two sets as input and print the common elements
@@ -10091,28 +10091,28 @@ def array_union(A,B):
 
 
 # Write a Python program that prints a new set with all items from both sets by removing duplicates
-# ---------------------------------------------------------
+
 set1 = {10, 20, 30, 40, 50}
 set2 = {30, 40, 50, 60, 70}
 print(set1.union(set2))
 
 
 # Write a Python program that Given two Python sets, update first set with items that exist only in the first set and not in the second set
-# ---------------------------------------------------------
+
 set1 = {10, 20, 30}
 set2 = {20, 40, 50}
 print(set1.difference_update(set2))
 
 
 # Write a Python program that prints a set of all elements in either A or B, but not both
-# ---------------------------------------------------------
+
 set1 = {10, 20, 30, 40, 50}
 set2 = {30, 40, 50, 60, 70}
 print(set1.symmetric_difference(set2))
 
 
 # Write a Python program that determines whether or not the following two sets have any elements in common. If yes display the common elements
-# ---------------------------------------------------------
+
 set1 = {10, 20, 30, 40, 50}
 set2 = {60, 70, 80, 90, 10}
 if set1.isdisjoint(set2):
@@ -12678,7 +12678,7 @@ list1 = [[4, 7],
              [10, 11],  
              [6, 8, 10]] 
  
-# initializing K  
+ # initializing K  
 K = 2
 
 for i in test_list:
@@ -12702,7 +12702,7 @@ for sub in list1:
       
     list2.append((int(el1), int(el2))) 
   
-# printing result  
+ # printing result  
 print("Equidigit tuples List : " + str(list2)) 
 
 #11 write a python function to filter Rows with a specific pair sum and return boolean value
@@ -12717,19 +12717,19 @@ def pair_sum(x, k):
     return False
   
   
-# initializing list 
+ # initializing list 
 test_list = [[1, 5, 3, 6], [4, 3, 2, 1], [7, 2, 4, 5], [6, 9, 3, 2]] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
   
-# initializing K 
+ # initializing K 
 k = 8
   
-# checking for pair sum 
+ # checking for pair sum 
 res = [ele for ele in test_list if pair_sum(ele, k)] 
   
-# printing result 
+ # printing result 
 print("Filtered Rows : " + str(res)) 
 
 #12 write a python program to find decreasing point in a list and print them
@@ -12743,7 +12743,7 @@ for idx in range(0, len(test_list) - 1):
         res = idx 
         break
   
-# printing result  
+ # printing result  
 print("Decreasing Point : " + str(res)) 
 
 
@@ -12763,7 +12763,7 @@ for idx in range(len(test_list[0])):
         res = False 
         break
   
-# printing result  
+ # printing result  
 print("Are all columns Unique : " + str(res)) 
 
 #14 Write a python program to find elements with the same index and print them
@@ -12775,7 +12775,7 @@ for idx, ele in enumerate(list1):
     if idx == ele: 
         list2.append(ele) 
   
-# printing result  
+ # printing result  
 print("Filtered elements : " + str(list2))
 
 #15 Write a python program to check if two list are reverse equal and print boolean value
@@ -12783,25 +12783,24 @@ print("Filtered elements : " + str(list2))
 list1 = [5, 6, 7, 8] 
 list2 = [8, 7, 6, 5] 
   
-# Check if two lists are reverse equal 
-# Using reversed() + == operator 
+ # Check if two lists are reverse equal 
+ # Using reversed() + == operator 
 res = list1 == list(reversed(list2)) 
   
-# printing result  
+ # printing result  
 print("Are both list reverse of each other ? : " + str(res))
 
 
 #16 write a python program to extract priority elements in tuple list
 
-
 test_list = [(5, 1), (3, 4), (9, 7), (10, 6)] 
   
  
-# initializing Priority list  
+ # initializing Priority list  
 prior_list = [6, 4, 7, 1] 
   
-# Extracting Priority Elements in Tuple List and print the list 
-# loop 
+ # Extracting Priority Elements in Tuple List and print the list 
+ # loop 
 res = [] 
 for sub in test_list: 
     for val in prior_list: 
@@ -12815,18 +12814,18 @@ print(res)
 list1 = ['the', 'sun', 'rises', '', 'the', 'east'] 
   
 
-# Check if any String is empty in list 
-# using len() + any() 
+ # Check if any String is empty in list 
+ # using len() + any() 
 res = any(len(ele) == 0 for ele in list1) 
   
-# printing result 
+ # printing result 
 print("Is any string empty in list? : " + str(res)) 
 
 #18 write a python program to increment numeric string by K  
 
 list = ["gfg", "234", "is", "98", "123", "best", "4"] 
 
-# initializing K 
+ # initializing K 
 K = 6
   
 res = []
@@ -12838,7 +12837,7 @@ for ele in test_list:
     else: 
         res.append(ele) 
   
-# printing result 
+ # printing result 
 print("Incremented Numeric Strings : " + str(res)) 
 
 
@@ -12861,7 +12860,7 @@ def remove(string, i):
 #20 Write a python program to move number to end of string and print them
 test_str = 'the2sun4rises5sinthe6east9'
   
-# printing original string 
+ # printing original string 
 print("The original string is : " + str(test_str))
 s=''
 r=''
@@ -12887,8 +12886,8 @@ print(f'number of spaces {count}')
 l = ['hello', 'guys', 'have', 
    'a', 'nice', 'day'] 
   
-# this will join all the  
-# elements of the list with ' ' 
+ # this will join all the  
+ # elements of the list with ' ' 
 l = ' '.join(l)  
 print(l) 
 
@@ -12934,10 +12933,10 @@ print(s)
 
 test_str = 'geeksforgeeks'
   
-# printing original string 
+ # printing original string 
 print("The original string is : " + str(test_str)) 
   
-# initializing length list 
+ # initializing length list 
 cus_lens = [5, 3, 2, 3] 
 
 res = [] 
@@ -12948,7 +12947,7 @@ for size in cus_lens:
     res.append(test_str[strt : strt + size]) 
     strt += size 
       
-# printing result  
+ # printing result  
 print("Strings after splitting : " + str(res)) 
 
 #27 Write a python program to extract strings with successive alphabets in alphabetical order and print the list
@@ -12968,13 +12967,13 @@ print(res)
 
 test_str = '5x6, 9x10, 7x8'
   
-# using replace() to create eval friendly string 
+ # using replace() to create eval friendly string 
 temp = test_str.replace(',', '+').replace('x', '*') 
   
-# using eval() to get the required result 
+ # using eval() to get the required result 
 res = eval(temp) 
   
-# printing result 
+ # printing result 
 print("The computed summation of products : " + str(res)) 
 
 
@@ -12994,7 +12993,7 @@ print(s)
 
 test_str = 'md.shakiluzzaman@gmail.com'
   
-# printing original string 
+ # printing original string 
 print("The original string is : " + str(test_str))
 s=test_str.split('@')
 print(s[1])
@@ -13004,16 +13003,16 @@ print(s[1])
 
 test_string = "GfG is best"
   
-# initializing prefix list 
+ # initializing prefix list 
 pref_list = ['best', 'GfG', 'good'] 
   
  
   
-# using filter() + startswith() 
-# Prefix tests in Strings 
+ # using filter() + startswith() 
+ # Prefix tests in Strings 
 res = list(filter(test_string.startswith, pref_list)) != [] 
   
-# print result 
+ # print result 
 print("Does string start with any prefix list sublist ? : " + str(res))
 
 
@@ -13021,10 +13020,10 @@ print("Does string start with any prefix list sublist ? : " + str(res))
 
 ini_str = "abc"
   
-# Printing initial string 
+ # Printing initial string 
 print("Initial string", ini_str) 
   
-# Finding all permuatation 
+ # Finding all permuatation 
 result = [] 
   
 def permute(data, i, length):  
@@ -13038,7 +13037,7 @@ def permute(data, i, length):
             data[i], data[j] = data[j], data[i]   
 permute(list(ini_str), 0, len(ini_str)) 
   
-# Printing result 
+ # Printing result 
 
 print("Resultant permutations", str(result))
 
@@ -13046,22 +13045,22 @@ print("Resultant permutations", str(result))
 
 test_str = "TheSchoolofAI"
   
-# initializing removal character 
+ # initializing removal character 
 rem_char = "e"
   
   
-# Using replace() 
-# Deleting all occurrences of character 
+ # Using replace() 
+ # Deleting all occurrences of character 
 res = test_str.replace(rem_char, "") 
   
-# printing result  
+ # printing result  
 print("The string after character deletion : " + str(res))
 
 #34 Write a python program for printing alternate Strings Concatenation
 
 test_list = ["Early", "morning", "is", "good", "for", "health"] 
   
-# printing original list  
+ # printing original list  
 print("The original list : " + str(test_list)) 
 s=[]
 k=test_list[::2]
@@ -13076,7 +13075,7 @@ print(a+b)
 #35 Write a python program to remove duplicate word from sentence and print it
 str1 = "Good bye bye world world"
 l=str1.split(" ")
-#s=[]
+s=[]
 s=list(set(l))
 print(" ".join(i for i in s))
 
@@ -13086,10 +13085,10 @@ print(" ".join(i for i in s))
 test_list = [(5, 3, 2, 1, 4), (3, 4, 9, 2, 1), 
              (9, 1, 2, 3, 5), (4, 8, 2, 1, 7)] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
   
-# initializing K 
+ # initializing K 
 K = 2
 
 l=[]
@@ -13105,14 +13104,14 @@ print(l)
 def get_max(sub): 
     return max(sub) 
   
-# initializing list 
+ # initializing list 
 test_list = [(4, 5, 5, 7), (1, 3, 7, 4), (19, 4, 5, 3), (1, 2)] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
   
-# sort() is used to get sorted result 
-# reverse for sorting by max - first element's tuples 
+ # sort() is used to get sorted result 
+ # reverse for sorting by max - first element's tuples 
 test_list.sort(key = get_max, reverse = True) 
   
 # printing result  
@@ -13138,33 +13137,33 @@ print(list(set(k)))
 test_tuple1 = (4, 5) 
 test_tuple2 = (7, 8) 
   
-# printing original tuples 
+ # printing original tuples 
 print("The original tuple 1 : " + str(test_tuple1)) 
 print("The original tuple 2 : " + str(test_tuple2)) 
   
-# All pair combinations of 2 tuples 
-# Using list comprehension 
+ # All pair combinations of 2 tuples 
+ # Using list comprehension 
 res =  [(a, b) for a in test_tuple1 for b in test_tuple2] 
 res = res +  [(a, b) for a in test_tuple2 for b in test_tuple1] 
   
-# printing result  
+ # printing result  
 print("The filtered tuple : " + str(res)) 
 
 #40 write a python program to find minimum k records from tuple list
 
 test_list = [('Manjeet', 10), ('Akshat', 4), ('Akash', 2), ('Nikhil', 8)] 
   
-# Initializing K 
+ # Initializing K 
 K = 2
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
   
-# Minimum K records 
-# Using sorted() + lambda 
+ # Minimum K records 
+ # Using sorted() + lambda 
 res = sorted(test_list, key = lambda x: x[1])[:K] 
   
-# printing result 
+ # printing result 
 print("The lowest K records are : " + str(res)) 
 
 
@@ -13173,31 +13172,31 @@ print("The lowest K records are : " + str(res))
 test_tup1 = (10, 4, 5, 6) 
 test_tup2 = (5, 10) 
   
-# printing original tuples 
+ # printing original tuples 
 print("The original tuple 1 : " + str(test_tup1)) 
 print("The original tuple 2 : " + str(test_tup2)) 
   
-# Check if one tuple is subset of other 
-# using issubset() 
+ # Check if one tuple is subset of other 
+ # using issubset() 
 res = set(test_tup2).issubset(test_tup1) 
   
-# printing result 
+ # printing result 
 print("Is 2nd tuple subset of 1st ? : " + str(res)) 
 
 
 #42 write a python program to display keys with same values in a dictionary List
 
-# initializing Matrix 
+ # initializing Matrix 
 test_list = [{"Gfg": 5, "is": 8, "best": 0}, 
              {"Gfg": 5, "is": 1, "best": 0}, 
              {"Gfg": 5, "is": 0, "best": 0}] 
   
   
-# getting keys 
+ # getting keys 
 keys = list(test_list[0].keys()) 
   
 res = [] 
-# iterating each dictionary for similar key's value 
+ # iterating each dictionary for similar key's value 
 for key in keys: 
     flag = 1
     for ele in test_list: 
@@ -13210,7 +13209,7 @@ for key in keys:
     if flag: 
         res.append(key) 
   
-# printing result 
+ # printing result 
 print("Similar values keys : " + str(res))
 
 
@@ -13221,39 +13220,39 @@ test_list = [{'gfg': 2, 'is': 8, 'good': 10},
              {'love': 3, 'gfg': 4}] 
   
   
-# sorted to check with ordered values 
-# values() extracting dictionary values 
+ # sorted to check with ordered values 
+ # values() extracting dictionary values 
 res = [sub for sub in test_list if sorted( 
     list(sub.values())) == list(sub.values())] 
   
-# printing result 
+ # printing result 
 print("The filtered Dictionaries : " + str(res)) 
 
 #44 write a python program to  rotate dictionary by K
 
 
-# Python3 code to demonstrate working of 
-# Rotate dictionary by K 
-# Using list comprehension + items() + dictionary comprehension 
+ # Python3 code to demonstrate working of 
+ # Rotate dictionary by K 
+ # Using list comprehension + items() + dictionary comprehension 
   
-# initializing dictionary 
+ # initializing dictionary 
 test_dict = {1: 6, 8: 1, 9: 3, 10: 8, 12: 6, 4: 9} 
   
   
-# initializing K 
+ # initializing K 
 K = 2
   
-# converting to tuples list 
+ # converting to tuples list 
 test_dict = list(test_dict.items()) 
   
-# performing rotate 
+ # performing rotate 
 res = [test_dict[(i - K) % len(test_dict)] 
        for i, x in enumerate(test_dict)] 
   
-# reconverting to dictionary 
+ # reconverting to dictionary 
 res = {sub[0]: sub[1] for sub in res} 
   
-# printing result 
+ # printing result 
 print("The required result : " + str(res)) 
 
 #45 write a python program to Count if dictionary position equals key or value and print it
@@ -13340,11 +13339,11 @@ print(test_list)
 test_dict = {'"Geeks"' : 3, '"is" for' : 5, '"g"eeks' : 9} 
   
   
-# dictionary comprehension to make double quotes free 
-# dictionary 
+ # dictionary comprehension to make double quotes free 
+ # dictionary 
 res = {key.replace('"', ''):val for key, val in test_dict.items()} 
       
-# printing result  
+ # printing result  
 print("The dictionary after removal of double quotes : " + str(res))
 
 #51 write a python program to check whether the values of a dictionary are in same order as in a list
@@ -13353,7 +13352,7 @@ test_dict = {"gfg" : 4, "is" : 10, "best" : 11, "for" : 19, "geeks" : 1}
   
 
   
-# initializing list  
+ # initializing list  
 sub_list = [4, 10, 11, 19, 1]
 
 l=list(test_dict.values())
@@ -13368,10 +13367,10 @@ else:
 
 test_dict = {"Gfg" : 2, "is" : 1, "Best" : 3} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
   
-# initializing dictionary list  
+ # initializing dictionary list  
 dict_list = [{'for' : 3, 'all' : 7}, {'geeks' : 10}, {'and' : 1, 'CS' : 9}]
 
 for i in dict_list:
@@ -13392,7 +13391,7 @@ for sub, vals in test_dict.items():
     if max_res == max(vals) - min(vals): 
         res = sub 
           
-# printing result  
+ # printing result  
 print("The maximum element key : " + str(res)) 
 
 #54 write a pythom program to find Maximum value from dictionary whose key is present in the list
@@ -13400,10 +13399,10 @@ print("The maximum element key : " + str(res))
 test_dict = {"Gfg": 4, "is" : 5, "best" : 9, 
              "for" : 11, "geeks" : 3} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
   
-# initializing list  
+ # initializing list  
 test_list = ["Gfg", "best", "geeks"] 
 c=sorted(test_dict.values(),reverse=True)
 for key,value in test_dict.items():
@@ -13415,7 +13414,7 @@ for key,value in test_dict.items():
 test_dict = {6 : 2, 8: 9, 3: 9, 10: 8} 
   
 
-# initializing N  
+ # initializing N  
 N = 4
   
 res = [] 
@@ -13424,7 +13423,7 @@ res = []
 for key, val in sorted(test_dict.items(), key = lambda x: x[0], reverse = True)[:N]: 
     res.append(key) 
   
-# printing result  
+ # printing result  
 print("Top N keys are: " + str(res))
 
 
@@ -13432,10 +13431,10 @@ print("Top N keys are: " + str(res))
 
 test_dict = {"Gfg" : 3, "is" : 5, "Best" : 9, "for" : 8, "Geeks" : 10} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
   
-# initializing K  
+ # initializing K  
 K = 14
 l=[]
 s=list(test_dict.values())
@@ -13452,7 +13451,7 @@ test_dict = {'Gfg' : 6, 'is' : 7, 'best' : 9, 'for' : 8, 'geeks' : 11}
   
 
   
-# initializing prefix  
+ # initializing prefix  
 temp = "Pro"
 
 d={}
@@ -13465,10 +13464,10 @@ print(d)
 
 test_dict = {"Gfg" : [4, 7, 5], "Best" : [8, 6, 7], "is" : [9, 3, 8]} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
   
-# initializing K  
+ # initializing K  
 K = 1
 
 s=[]
@@ -13481,19 +13480,19 @@ print(s)
 
 import re 
   
-# initializing dictionary 
+ # initializing dictionary 
 test_dict = {'Gfg' : ["G4G is Best 4", "4 ALL geeks"], 
              'is' : ["5 6 Good"],  
              'best' : ["Gfg Heaven", "for 7 CS"]}  
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
   
-# using dictionary comprehension to go through all keys 
+ # using dictionary comprehension to go through all keys 
 res = {key: [re.sub('\d', '', ele) for ele in val] 
        for key, val in test_dict.items()} 
           
-# printing result  
+ # printing result  
 print("The filtered dictionary : " + str(res))  
 
 #60 write a program to Test for Even values dictionary values lists and print it
@@ -13515,20 +13514,20 @@ for sub in test_dict:
     # adding True if all Even elements 
     res[sub] = True if flag else False
   
-# printing result  
+ # printing result  
 print("The computed dictionary : " + str(res))
 
 #61 write a program to sort Dictionary by Values and Keys and print it
 
 test_dict = {"Gfg" : 1, "is" :  3, "Best" : 2, "for" : 3, "Geeks" : 2} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
   
-# - sign for descended values, omit if low-high sorting required 
+ # - sign for descended values, omit if low-high sorting required 
 res = {val[0] : val[1] for val in sorted(test_dict.items(), key = lambda x: (-x[1],x[0]))} 
   
-# printing result  
+ # printing result  
 print("Sorted dictionary : " + str(res))
 
 
@@ -13537,7 +13536,7 @@ print("Sorted dictionary : " + str(res))
 test_list = ["abGFGcs", "cdforef", "asalloi"] 
   
   
-# initializing range 
+ # initializing range 
 i, j = 2, 5
 r=''
 for z in test_list:
@@ -13549,10 +13548,10 @@ print(r)
 
 test_dict = {"Gfg" : 5, "is" : 8, "Best" : 10, "for" : 8, "Geeks" : 9} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
   
-# initializing updict 
+ # initializing updict 
 updict = {"Gfg"  : 10, "Best" : 17} 
 d={}
 for key in test_dict.keys():
@@ -13566,17 +13565,17 @@ print(d)
 #64 write a program  to convert string to dictionary and print it
 
 
-# Python implementation of converting 
-# a string into a dictionary 
+ # Python implementation of converting 
+ # a string into a dictionary 
   
-# initialising string  
+ # initialising string  
 str = " Jan = January; Feb = February; Mar = March"
   
  
-# generates key:value pair for each item 
+ # generates key:value pair for each item 
 dictionary = dict(subString.split("=") for subString in str.split(";")) 
   
-# printing the generated dictionary 
+ # printing the generated dictionary 
 print(dictionary) 
 
 #65 write a python program to extract item with Maximum Tuple Value
@@ -13586,14 +13585,14 @@ test_dict = {'gfg' : (4, 6),
              'best' : (8, 2)} 
 
   
-# initializing tuple index  
-# 0 based indexing 
+ # initializing tuple index  
+ # 0 based indexing 
 tup_idx = 1
   
-# Extract Item with Maximum Tuple Value 
-# Using max() + lambda 
+ # Extract Item with Maximum Tuple Value 
+ # Using max() + lambda 
 res = max(test_dict.items(), key = lambda ele: ele[1][tup_idx])
-# printing result  
+ # printing result  
 print("The extracted maximum element item : " + str(res)) 
 
 
@@ -13601,10 +13600,10 @@ print("The extracted maximum element item : " + str(res))
 
 test_str = 'gfg is best for geeks'
   
-# printing original string 
+ # printing original string 
 print("The original string is : " + str(test_str)) 
   
-# initializing Dictionary 
+ # initializing Dictionary 
 test_dict = {'geeks' : 1, 'best': 6} 
 l=test_str.split()
 print(l)
@@ -13619,10 +13618,10 @@ print(" ".join(i for i in l))
 
 test_list = ["gfg", "is", "best", "for", "geeks"] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
   
-# initializing K  
+ # initializing K  
 K = 2
 d={}
 for i in test_list:
@@ -13648,12 +13647,12 @@ print(s)
 #69 write a python program for printing custom order dictionary 
 
 
-# initializing dictionary 
+ # initializing dictionary 
 test_dict = {'is' : 2, 'for' : 4, 'gfg' : 1, 'best' : 3, 'geeks' : 5}  
   
 
   
-# initializing order 
+ # initializing order 
 ord_list = ['gfg', 'is', 'best', 'for', 'geeks'] 
  
 c={}
@@ -13667,7 +13666,7 @@ print(c)
 
 test_dict = {"Gfg" : ["34", "45", 'geeks'], 'is' : ["875", None, "15"], 'best' : ["98", 'abc', '12k']} 
   
-# printing original dictionary 
+ # printing original dictionary 
 
 
 res = [] 
@@ -13676,7 +13675,7 @@ for a, b, c in zip(*test_dict.values()):
     if a.isdigit() : 
         res.append((a, b, c)) 
       
-# printing result  
+ # printing result  
 print("The Numerical values : " + str(res)) 
 
 
@@ -13684,7 +13683,7 @@ print("The Numerical values : " + str(res))
 
 test_list = [10, {'gfg' : 1}, {'ide' : 2, 'code' : 3}, 20] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
 count=0
 for i in test_list:
@@ -13697,10 +13696,10 @@ print(count)
 
 test_dict = {'Gfg' : 4, 'is' : 2, 'best': 3, 'for' : 6, 'geeks' : 1} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary : " + str(test_dict)) 
 d={}  
-# initializing K 
+ # initializing K 
 K = 2
 for keys,values in test_dict.items():
     if values >K:
@@ -13729,20 +13728,20 @@ test_list = [{'Gfg' :  1, 'id' : 2 },
   
  
   
-# initializing key  
+ # initializing key  
 new_key = 'best'
   
-# initializing list  
+ # initializing list  
 add_list = [12, 2] 
   
-# Assign list items to Dictionary 
-# Using zip() + loop 
+ # Assign list items to Dictionary 
+ # Using zip() + loop 
 res = [] 
 for sub, val in zip(test_list, add_list): 
     sub[new_key] = val 
     res.append(sub) 
       
-# printing result  
+ # printing result  
 print("The modified dictionary : " + str(res))
 
 
@@ -13751,7 +13750,7 @@ print("The modified dictionary : " + str(res))
 
 test_dict = {'gfg' : True, 'is' : False, 'best' : True} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict))
 
 res=True
@@ -13767,7 +13766,7 @@ test_dict = {'gfg' : '2345',
              'is' : 'abcde', 
              'best' : 'qwerty'} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
 list1=list(test_dict.values())
 print(list1)
@@ -13783,7 +13782,7 @@ test_dict = {'gfg' : [4, 5],
              'for' : [6, 8, 2],  
              'geeks' : [12, 24]} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
 s=[]
 a=0
@@ -13804,10 +13803,10 @@ print(l)
 
 test_dict = {'gfg' : 1, 'is' : 2, 'for' : 4, 'CS' : 5} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary : " + str(test_dict)) 
   
-# Initialize K  
+ # Initialize K  
 K = 5
 
 for key,value in test_dict.items():
@@ -13820,7 +13819,7 @@ print(test_dict)
 test_dict1 = {'gfg' : 1, 'is' : 2, 'best' : 3} 
 test_dict2 = {'gfg' : 1, 'is' : 2, 'good' : 3} 
   
-# printing original dictionaries 
+ # printing original dictionaries 
 print("The original dictionary 1 is : " + str(test_dict1)) 
 print("The original dictionary 2 is : " + str(test_dict2))
 
@@ -13831,26 +13830,16 @@ for key1,value1 in test_dict1.items():
            count=count+1
 print(count)
 
-#80 write a python program to print Nth largest values in dictionary
-
-
-
-
-
-
-
-
-
 #81 write a python program to print consecutive Kth column Difference in Tuple List
 
-# Consecutive Kth column Difference in Tuple List
+ # Consecutive Kth column Difference in Tuple List
 
 test_list = [(5, 4, 2), (1, 3, 4), (5, 7, 8), (7, 4, 3)] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
   
-# initializing K  
+ # initializing K  
 K = 1 
 s=[]
 for i in range(0,len(test_list)-1):
@@ -13862,14 +13851,14 @@ print(s)
 
 test_list = [(4, 5, 9), (-3, 2, 3), (-3, 5, 6), (4, 6)] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
 
-#[all(i) for i in test_list if i>0]
+ #[all(i) for i in test_list if i>0]
 
 result = [i for i in test_list if all(ele >= 0 for ele in i)] 
   
-# printing result 
+ # printing result 
 print("Positive elements Tuples : " + str(result))  
 
 
@@ -13877,26 +13866,26 @@ print("Positive elements Tuples : " + str(result))
 
 test_list = [("GF ! g !", 5), ("! i ! s", 4), ("best !!", 10)] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
   
-# initializing K  
+ # initializing K  
 K = "!"
   
-# replace with empty string removes the desired char. 
+ # replace with empty string removes the desired char. 
 res = [(sub[0].replace(K, ''), sub[1]) for sub in test_list] 
   
-# printing result  
+ # printing result  
 print("The filtered tuples : " + str(res)) 
 
 #84  write a python program remove particular data type Elements from Tuple and print it
 
 test_tuple = (4, 5, 'Gfg', 7.7, 'Best') 
   
-# printing original tuple 
+ # printing original tuple 
 print("The original tuple : " + str(test_tuple)) 
   
-# initializing data type 
+ # initializing data type 
 a=tuple()
 data_type = int 
 for i in test_tuple:
@@ -13908,7 +13897,7 @@ print(list(a))
 
 test_list = [(1, 'Rash', 21), (2, 'Varsha', 20), (3, 'Kil', 19)] 
   
-# printing original list  
+ # printing original list  
 print ("The original list is : " + str(test_list))
 s=[]
 for i in test_list:
@@ -13923,7 +13912,7 @@ test_tup1 = (10, 4, 5, 6)
 test_tup2 = (5, 6, 7, 5) 
 s=tuple() 
   
-# printing original tuples  
+ # printing original tuples  
 print("The original tuple 1 : " + str(test_tup1))  
 print("The original tuple 2 : " + str(test_tup2))
 
@@ -13936,7 +13925,7 @@ print(s)
 
 test_tup = (1, 5, 7, (4, 6), 10) 
   
-# printing original tuple 
+ # printing original tuple 
 print("The original tuple : " + str(test_tup))
 count=0
 for i in test_tup:
@@ -13952,7 +13941,7 @@ print(f'count of element till first tuple is {count}')
 test_tup1 = (3, 4, 5, 6) 
 test_tup2 = (5, 7, 4, 10) 
   
-# printing original tuples 
+ # printing original tuples 
 print("The original tuple 1 : " + str(test_tup1)) 
 print("The original tuple 2 : " + str(test_tup2))
 c=tuple()
@@ -13964,7 +13953,7 @@ print(f'Dissimilar element tuple is {c}')
 
 test_list = [('1', '4', '6'), ('5', '8'), ('2', '9'), ('1', '10')] 
   
-# printing original tuples list 
+ # printing original tuples list 
 print("The original list : " + str(test_list)) 
 s=''
 for i in test_list:
@@ -13976,7 +13965,7 @@ print(f' string after flattening is {s}')
 
 test_list = [(1, 4, 6), (5, 8), (2, 9), (1, 10)] 
 s=[]  
-# initialize target list  
+ # initialize target list  
 tar_list = [6, 10] 
 
 for i in test_list:
@@ -13993,7 +13982,7 @@ print(s)
 test_tup1 = (1, 3, 5) 
 test_tup2 = (4, 6) 
   
-# printing original tuples 
+ # printing original tuples 
 print("The original tuple 1 : " + str(test_tup1)) 
 print("The original tuple 2 : " + str(test_tup2)) 
 c=test_tup1+test_tup2
@@ -14003,7 +13992,7 @@ print(c)
 
 test_tup = ([7, 5, 4], [8, 2, 4], [0, 7, 5]) 
   
-# printing original tuple 
+ # printing original tuple 
 print("The original tuple is : " + str(test_tup)) 
 s=tuple(sorted([j for j in i],reverse=False ) for i in test_tup)
 print(f'the sorted list inside tuple is {s}')
@@ -14012,7 +14001,7 @@ print(f'the sorted list inside tuple is {s}')
 
 test_list = [('Geeks', 1, 2), ('for', 4, 'Geeks'), (45, 'good')] 
   
-# printing original list 
+ # printing original list 
 print("The original list : " + str(test_list)) 
 
 s=[]
@@ -14045,7 +14034,7 @@ ini_tuple = (1, 2, 3, 4, 8, 12, 3, 34,
 n=4
 N=0
 s=tuple()
-#t=tuple()
+t=tuple()
 for i in range(0,len(ini_tuple)//n):
     t=tuple()
     for j in range(N,N+n):
@@ -14072,10 +14061,10 @@ print(list(set(a)))
 test_list = [('geeks', 'for', 'geeks'), 
              ('computer', 'science', 'portal')] 
   
-# printing original list 
+ # printing original list 
 print ("The original list is : " + str(test_list)) 
 l=[]
-#s=''
+s=''
 for i in test_list:
     s=''
     for j in i:
@@ -14099,7 +14088,7 @@ test_list = [{"Gfg": 8, "is": 1, "Best": 9},
              {"Gfg": 2, "is": 9, "Best": 1}, 
              {"Gfg": 5, "is": 10, "Best": 7}] 
   
-# printing original list 
+ # printing original list 
 print("The original list is : " + str(test_list)) 
   
   
@@ -14113,17 +14102,17 @@ for i in test_list:
         else: 
             res[key] = value 
   
-# printing result 
+ # printing result 
 print("All keys maximum : " + str(res))
 
 #100 write a python program to extract Keys with specific Value Type
 
 test_dict = {'gfg': 2, 'is': 'hello', 'best': 2, 'for': {'1': 3}, 'geeks': 4} 
   
-# printing original dictionary 
+ # printing original dictionary 
 print("The original dictionary is : " + str(test_dict)) 
   
-# initializing type 
+ # initializing type 
 targ_type = int
   
 res = [] 
@@ -14133,7 +14122,7 @@ for key, val in test_dict.items():
     if isinstance(val, targ_type): 
         res.append(key) 
   
-# printing result 
+ # printing result 
 print("The extracted keys : " + str(res))
 
 if __name__ == '__main__': 
@@ -14147,13 +14136,13 @@ if __name__ == '__main__':
     print(remove(string, i))
 
 
-# 1
+
 # write a python function to remove last element in the list
 def remove_last_element_list(list1):
     list1.pop()
     return list1
 
-# 2
+
 # write a python function to find the add two numbers and then find the largest among sum and other two inputs
 def find_the_largest(num1, num2):
     sum_ = num1+num2
@@ -14164,21 +14153,20 @@ def find_the_largest(num1, num2):
     else:
         return sum_
     
-# 3 
 # write a function to calculate the area of polygon given the number of edges, circumradius
 import math
 def area_of_polygon(number_of_edges, circumradius):
         return number_of_edges * 2 * circumradius * math.sin(180/number_of_edges) * circumradius * math.cos(180/number_of_edges) * 0.5
 
 
-# 4
+
 # write a function to calculate the apothem of polygon given the number of edges, circumradius
 import math
 def apothem_of_polygon(number_of_edges, circumradius):
     return circumradius * math.cos(180/number_of_edges)
     
 
-# 5
+
 # write a function which creates a deck of cards, given the list of suits and values
 def create_deck_of_cards(values: list, suits: list):
     card_deck = []
@@ -14187,7 +14175,7 @@ def create_deck_of_cards(values: list, suits: list):
         card_deck.append(tup)
     return card_deck
 
-# 6
+
 # write a function which converts temperature values, from Celsius(C) to Fahreinheit(F) and from Fahreinheit(F) to Celsius(C) \
     #  given the temperature value and its unit
 
@@ -14202,19 +14190,18 @@ def temp_converter(value, unit):
         raise ValueError
     
     
-# 7
+
 # write a function which takes in a list and a number as an input and returns a list with each list element raised to power of that number 
 def powered_list(a_list, a_number):
     a_list = [math.pow(a_number) for i in a_list]  
     return a_list
         
         
-# 8 
 # write a function to execute a string containing Python code
 def execute_python_code(a_string):
     return exec(a_string)
 
-# 9 
+
 # write a function to multiply all the numbers in a list
 def multiply_all(a_list):
     product = 1
@@ -14222,13 +14209,13 @@ def multiply_all(a_list):
         product *= i
     return product
 
-# 10
+
 #  write a function to slice a tuple, given an input tuple and start, stop, step=1
 def slice_a_tuple(a_tuple, start, stop, step=1):
     return a_tuple[start:stop:step]
 
 
-# 11
+
 # write a function to check if a list is empty or not
 def list_is_empty(a_list):
     if not a_list:
@@ -14237,40 +14224,40 @@ def list_is_empty(a_list):
         return False
     
     
-# 12
+
 # Write a Python function to convert a string list to a normal list type
 import ast
 def convert_string_to_list(str_lst):
     return ast.literal_eval(str_lst)
 
 
-# 13
+
 # Write a Python function to extend a list without append. 
 def extend_list_without_append(list1, list2):
     return list1.extend(list2)
 
-# 14
+
 #  Write a Python function to find the median among three given numbers
 def find_the_median(x,y,z):
     list_ = sorted([x,y,z])
     return list_[1]
 
-# 15
+
 # Write a python function to remove a newline in Python
 def remove_newline(string):
     return string.strip()
 
-# 16
+
 # Write a python function to convert a string to a list
 def convert_str_to_list(string):
     return string.split(' ')
 
-# 17
+
 #  Write a python function to remove spaces from a given string
 def remove_spaces_from_string(string):
     return string.replace(' ', '')
 
-# 18
+
 # Write a python function to capitalize first and last letters of each word of a given string
 capitalize_both_ends = lambda x: x[0].upper() + x[1:-1] + x[-1].upper()
 
@@ -14279,33 +14266,33 @@ def capitalize_first_and_last(string):
     new_string = [capitalize_both_ends(word) for word in string]
     return new_string
         
-# 19
+
 # Write a python function to remove duplicate words from a given string
 def remove_duplicate_words(string):
     string = string.strip().split()
     return ' '.join(set(string))
     
     
-# 20 
+
 # Write a python function to calculate number of days between two dates using datetime module
 from datetime import date
 def day_diff(date1, date2):
     diff = date1 - date2
     return diff.days
 
-# 21
+
 # Write a python function to get the volume of a sphere with radius as input
 def sphere_volume(radius):
     volume =  4.0/3.0 * 3.14 * radius ** 3
     return volume    
 
-# 22
+
 # Write a Python function to check whether the input letter is a vowel or not
 def check_vowel_or_not(letter):
     result =  str(letter) in "aeiou"
     return result
 
-# 23
+
 # Write a Python function to get OS name & platform using os & platform library
 import os
 import platform
@@ -14313,13 +14300,13 @@ def get_info():
     return f'OS: {os.name}\n Platform: {platform.system}'
 
 
-# 24
+
 # Write a Python program to print out the number of CPUs working behind the scenes using multiprocessing library
 import multiprocessing
 print(multiprocessing.cpu_count())
     
     
-# 25
+
 # Write a Python program to calculate the hypotenuse of a right angled triangle using math library
 
 from math import sqrt
@@ -14328,14 +14315,14 @@ def hypotenuse(side1, side2):
     hyp = sqrt(side1**2 + side2**2)
     return hyp
 
-# 26
+
 # Write a Python function to convert height (in feet and inches) to centimeters
 def height_converter(h_ft, h_inch):
     h_inch += h_ft * 12
     h_cm = round(h_inch * 2.54, 1)
     return h_cm
 
-# 27
+
 #  Write a Python function to convert the distance (in feet) to inches, yards, and miles.
 def distance_converter(d_ft):
     d_inches = d_ft  * 12
@@ -14343,7 +14330,7 @@ def distance_converter(d_ft):
     d_miles = d_ft  / 5280.0
     return f"Distance in Inches:{d_inches}\nDistance in Yards :{d_yards}\nDistance in Miles :{d_miles}"
 
-# 28
+
 #  Write a Python program to get the copyright information using sys module
 import sys
 print("\nPython Copyright Information")
@@ -14351,7 +14338,7 @@ print(sys.copyright)
 print()
 
 
-# 29
+
 # Write a Python program to find the available built-in modules using sys and textwrap modules
 import sys
 import textwrap
@@ -14359,46 +14346,46 @@ module_name = ', '.join(sorted(sys.builtin_module_names))
 print(textwrap.fill(module_name, width=70))
 
 
-# 30
+
 # Write a Python program to get the current username using getpass library
 import getpass
 print(getpass.getuser())
 
 
-# 31
+
 # Write a Python program to accept a filename from the user and print the extension of that
 def filename_extension(file):
     f_extns = file.split(".")
     return f"The extension of the file is :{repr(f_extns[-1])}"
 
 
-# 32
+
 # Write a Python function that calculates the area of parallelogram and takes in base, height as input
 def area_shape(base, height, shape):
     return {'triangle': 0.5*base*height, 'parallelogram': base*height}[shape]
 
-# 33
+
 # Write a Python function to reverse a string if it's length is a multiple of 4.
 def reverse_string(str1):
     if len(str1) % 4 == 0:
        return ''.join(reversed(str1))
     return str1
 
-# 34
+
 # Write a Python function to reverse words in a string.
 def reverse_string_words(text):
     for line in text.split('\n'):
         return(' '.join(line.split()[::-1]))
 
 
-# 35
+
 # Write a Python program to count and display the vowels of a given text.
 def vowel(text):
     vowels = "aeiuoAEIOU"
     main_list = [letter for letter in text if letter in vowels]
     return len(main_list), main_list
 
-# 36
+
 # Write a Python program to find the first repeated character in a given string
 def first_repeated_char(str1):
     for index,c in enumerate(str1):
@@ -14406,7 +14393,7 @@ def first_repeated_char(str1):
             return c 
     return "None"
 
-# 37
+
 # Write a Python program to find the first repeated word in a given string.
 def first_repeated_word(str1):
     temp = set()
@@ -14418,27 +14405,27 @@ def first_repeated_word(str1):
     return 'None'
 
 
-# 38
+
 # Write a Python program to remove spaces from a given string
 def remove_spaces(str1):
     str1 = str1.replace(' ','')
     return str1
  
 
-# 39
+
 # Write a Python program to remove spaces from a given string using set
 def remove_duplicate(str1):
     list_str = str1.split()
     return "".join(set(list_str))
 
-# 40
+
 # Write a Python function that will accept the base and height of a triangle and compute the area.
 def triangle_area(base, height):
     area = base*height/2
     return area
 
 
-# 41
+
 # Write a Python function to create all possible permutations from a given collection of distinct numbers.
 def permute(nums):
     result_perms = [[]]
@@ -14451,108 +14438,106 @@ def permute(nums):
     return result_perms
 
 
-# 42
+
 # Write a Python program to print the calendar of a given month and year
 import calendar
 y = int(input("Input the year : "))
 m = int(input("Input the month : "))
 print(calendar.month(y, m))
 
-# 43
+
 # Write a python function to get the volume of a cube with side as input
 def cube_volume(side):
     volume = side ** 3
     return volume 
 
-# 44
+
 # Write a python function to get the volume of a prism with base area & height as input
 def prism_volume(base_area, height):
     volume = base_area * height
     return volume
 
-# 45
+
 # Write a python function to get the volume of a cylinder with radius & height as input
 def cylinder_volume(radius, height):
     volume = 3.14 * (radius ** 2) * height
     return volume
 
-# 46
+
 #  Write a python function to get the volume of a cone with radius & vertical height as input
 def cone_volume(radius, height):
     volume = 1/3 * 3.14 * (radius ** 2) * height
     return volume
 
 
-# 47 
+
 #  Write a python function to get the volume of a pyramid with base area & vertical height as input
 def pyramid_volume(base_area, height):
     volume = 1/3 * base_area * height
     return volume
 
-# 48 
 # Write a python function to get the surface area of a cube with side as input
 def cube_surface_area(side):
     surface_area = 6 * side ** 2
     return surface_area 
 
-# 49
+
 # Write a python function to get the volume of a rectangular prism with side as length, width and height as input
 def rec_prism_volume(length, width, height):
     volume = length * width * height
     return volume 
 
-# 50
+
 # Write a python function to get the surface_area of a rectangular prism with side as length, width and height as input
 def rec_prism_surface_area(length, width, height):
     surface_area = 2*((length * width) + (width * height) + (height * length))
     return surface_area 
 
 
-# 51
+
 # Write a python function to get the surface_area of a prism with base area, base perimeter & height as input
 def prism_surface_area(base_area, base_perimeter, height):
     surface_area = 2*base_area + (base_perimeter*height)
     return surface_area
 
-# 52
+
 # Write a python function to get the surface_area of a cylinder with radius & height as input
 def cylinder_surface_area(radius, height):
     surface_area = 3.14 * (radius ** 2) + (2 * 3.14 * radius * height)
     return surface_area
 
 
-# 53
+
 #  Write a python function to get the surface_area of a cone with radius & slant height as input
 def cone_surface_area(radius, slant_height):
     surface_area =  3.14 * (radius ** 2) + 3.14 * radius * slant_height
     return surface_area
 
 
-# 54
+
 #  Write a python function to get the surface_area of a pyramid with base area & vertical height as input
 def pyramid_surface_area(base_area, height):
     surface_area = 1/3 * base_area * height
     return surface_area
 
-# 55
+
 #  Write a python function to get the volume of a cuboid with length, breadth & height as input
 def cuboid_volume(length, breadth, height):
     volume = length * breadth * height
     return volume
 
 
-# 56
+
 # Write a python function to break a list into chunks of size N use generator
 my_list = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'] 
 
-# Yield successive n-sized 
-# chunks from l. 
+ # Yield successive n-sized chunks from l. 
 def divide_chunks(l, n): 
 	# looping till length l 
 	for i in range(0, len(l), n): 
 		yield l[i:i + n] 
 
-# 57
+
 # Write a python function to generate Lucas Numbers (2, 1, 3, 4, 7, 11, 18...)
 def lucas_numbers(n):
     first, second = 2,1
@@ -14560,26 +14545,26 @@ def lucas_numbers(n):
         first, second = second, first+second
     return first
             
-# 58
+
 # Write a python function to generate Square Numbers (1, 4, 9, 16, 25...)
 def square_numbers(n):
     for i in range(n):
         yield i ** 2
         
         
-# 59
+
 # Write a python function to generate Cube Numbers (1, 8, 27, 64, 125...)
 def cube_numbers(n):
     for i in range(n):
         yield i **  3
             
-# 60
+
 # Write a python function to generate Triangular Number Series (1, 3, 6, 10, 15...)
 def triangle_numbers(n):
     for i in range(n):
         yield int(i*(i+1)/2)
         
-# 61
+
 # Write a python function to generate  Euclid Number Series(2, 3, 7, 31, 211, 2311, 30031)
 from math import sqrt
 from itertools import count, islice
@@ -14597,7 +14582,7 @@ def euclid_numbers(n):
                 
          
          
-# 61
+
 # Write a Python program to add a prefix text to all of the lines in a string.
 import textwrap
 sample_text ='''
@@ -14613,7 +14598,7 @@ wrapped = textwrap.fill(text_without_Indentation, width=50)
 final_result = textwrap.indent(wrapped, '> ')
 
 
-# 62
+
 # Write a Python program to print the following floating numbers with no decimal places.
 x = 3.1415926
 y = -12.9999
@@ -14623,7 +14608,7 @@ print("Original Number: ", y)
 print("Formatted Number with no decimal places: "+"{:.0f}".format(y))
 
 
-# 63
+
 # Write a Python program to append a list to the second list.
 list1 = [1, 2, 3, 0]
 list2 = ['Red', 'Green', 'Black']
@@ -14631,19 +14616,18 @@ final_list = list1 + list2
 print(final_list)
 
 
-# 64
+
 # Write a Python program to create the colon of a tuple.
 
 from copy import deepcopy
-#create a tuple
+ #create a tuple
 tuplex = ("HELLO", 5, [], True) 
 print(tuplex)
-#make a copy of a tuple using deepcopy() function
+ #make a copy of a tuple using deepcopy() function
 tuplex_colon = deepcopy(tuplex)
 tuplex_colon[2].append(50)
 
 
-#65
 # Write a Python program to find the repeated items of a tuple.
 tuplex = 2, 4, 5, 6, 2, 3, 4, 4, 7 
 print(tuplex)
@@ -14651,52 +14635,52 @@ print(tuplex)
 count = tuplex.count(4)
 print(count)
 
-# 66
+
 # Write a Python program to slice a tuple
 
-#create a tuple
+ #create a tuple
 tuplex = (2, 4, 3, 5, 4, 6, 7, 8, 6, 1)
-#used tuple[start:stop] the start index is inclusive and the stop index
+ #used tuple[start:stop] the start index is inclusive and the stop index
 _slice = tuplex[3:5]
 
 
-# 67
+
 # Write a Python program to reverse a tuple.
 
-#create a tuple
+ #create a tuple
 x = ("w3resource")
-# Reversed the tuple
+ # Reversed the tuple
 y = reversed(x)
 
-# 68
+
 # Write a Python program to convert a list of tuples into a dictionary.
 
-#create a list
+ #create a list
 l = [("x", 1), ("x", 2), ("x", 3), ("y", 1), ("y", 2), ("z", 1)]
 d = {}
 for a, b in l:
     d.setdefault(a, []).append(b)
 print (d)
 
-# 69
+
 # Write a Python program to check whether an element exists within a tuple.
 tuplex = ("w", 3, "r", "e", "s", "o", "u", "r", "c", "e")
 print("e" in tuplex)
 
 
-# 70
+
 # Write a Python function to convert a list to a tuple.
 def convert_list_to_tuple(list_input):
     return tuple(list_input)
 
 
-# 71
+
 # Write a Python function to unzip a list of tuples into individual lists
 def unzip_list_of_tuples(list_tuple):
     return list(zip(*l))
 
 
-# 72
+
 # Write a Python program to convert a list of tuples into a dictionary.
 l = [("x", 1), ("x", 2), ("x", 3), ("y", 1), ("y", 2), ("z", 1)]
 d = {}
@@ -14705,7 +14689,7 @@ for a, b in l:
 print(d)
 
 
-# 73
+
 # Write a Python function to clear a set.
 def clear_set(set_input):
     setp_copy = set_input.copy()
@@ -14713,57 +14697,57 @@ def clear_set(set_input):
     return setp_copy
 
 
-# 74
+
 # Write a Python function that returns the ASCII value of the passed in character.
 def ascii_value_of_character(char):
     return ord(char)
 
 
-# 75
+
 # Write a Python function to create a union of sets.
-#Union
+ #Union
 def union_of_sets(Set1, Set2):
     result = Set1 | Set2
     return result
 
 
-# 76
+
 # Write a Python program to add member in a set
-#A new empty set
+ #A new empty set
 color_set = set()
 color_set.add("Red")
 print(color_set)
 
 
-# 77
+
 # Write a Python function to add two given lists using map and lambda.
 def add_two_lists(list_1, list_2):
     result = map(lambda x, y: x + y, list_1, list_2)
     return result
 
 
-# 78
+
 # Write a Python function to find numbers within a given range where every number is divisible by every digit it contains. 
 def divisible_by_digits(start_num, end_num):
     return [n for n in range(start_num, end_num+1) \
                 if not any(map(lambda x: int(x) == 0 or n%int(x) != 0, str(n)))]
 
 
-# 79
+
 # Write a Python function to find the maximum value in a given heterogeneous list using lambda
 def max_val(list_val):
      max_val = max(list_val, key = lambda i: (isinstance(i, int), i))  
      return(max_val)
  
 
-# 80
+
 # Write a Python function that takes a string and returns the concatenated first and last character
 def first_last(name):
     return name[0] + name[-1]
 
-# 81
+
 # Write a Python function to return Syslvester's Sequence
-# a(n) = a(n-1)**2 + a(n-1) + 1
+ # a(n) = a(n-1)**2 + a(n-1) + 1
 def syslvester_seq(n):
     if n == 1:
         return 2
@@ -14772,9 +14756,9 @@ def syslvester_seq(n):
     
     
 
-# 82
+
 # Write a Python function to return Tribonacci's Sequence
-# T(n) = T(n − 1) + T(n − 2) + T(n − 3) for n ≥ 3 [T(0) = 0, T(1) = 1, T(2) = 1]
+ # T(n) = T(n − 1) + T(n − 2) + T(n − 3) for n ≥ 3 [T(0) = 0, T(1) = 1, T(2) = 1]
 def tribonacci_seq(n):
     if n >= 0:
         if n == 0:
@@ -14786,9 +14770,9 @@ def tribonacci_seq(n):
         else:
             return tribonacci_seq(n-1) + tribonacci_seq(n-2) + tribonacci_seq(n-3)
         
-# 83
+
 # Write a Python function to return Pell's Sequence
-# a(n) = 2a(n − 1) + a(n − 2) for n ≥ 2, with a(0) = 0, a(1) = 1. 
+ # a(n) = 2a(n − 1) + a(n − 2) for n ≥ 2, with a(0) = 0, a(1) = 1. 
 def pell_seq(n):
     if n >= 0:
         if n == 0:
@@ -14798,16 +14782,16 @@ def pell_seq(n):
         else:
             return 2 * pell_seq(n-1) + pell_seq(n-2)
         
-# 84
+
 # Write a Python function to return Fermat's Sequence
-# Fn = 2 ** 2n + 1 for n ≥ 0. 
+ # Fn = 2 ** 2n + 1 for n ≥ 0. 
 def fermat_seq(n):
     if n >= 0:
         return 2 ** (2**n) + 1
   
-# 85
+
 # Write a Python function to return Padovan's Sequence
-# P(n) = P(n − 2) + P(n − 3) for n ≥ 3, with P(0) = P(1) = P(2) = 1.
+ # P(n) = P(n − 2) + P(n − 3) for n ≥ 3, with P(0) = P(1) = P(2) = 1.
 def padovan_seq(n):
     if n >= 0:
         if n in {0,1,2}:
@@ -14815,9 +14799,9 @@ def padovan_seq(n):
         else:
             return padovan_seq(n-3) + padovan_seq(n-2)
     
-# 86
+
 # Write a Python function to return Jacobsthal's number
-# a(n) = a(n − 1) + 2a(n − 2) for n ≥ 2, with a(0) = 0, a(1) = 1.
+ # a(n) = a(n − 1) + 2a(n − 2) for n ≥ 2, with a(0) = 0, a(1) = 1.
 def jacobsthal_seq(n):
      if n >= 0:
         if n == 0:
@@ -14828,9 +14812,9 @@ def jacobsthal_seq(n):
             return 2 * jacobsthal_seq(n-2) + jacobsthal_seq(n-1)
     
     
-# 87
+
 #  Write a Python function to return perrin's number
-# P(n) = P(n−2) + P(n−3) for n ≥ 3, with P(0) = 3, P(1) = 0, P(2) = 2. 
+ # P(n) = P(n−2) + P(n−3) for n ≥ 3, with P(0) = 3, P(1) = 0, P(2) = 2. 
 def perrins_number(n):
     if n >= 0:
         if n == 0:
@@ -14843,69 +14827,69 @@ def perrins_number(n):
             return perrins_number(n-3) + perrins_number(n-2)
      
        
-# 88
+
 #  Write a Python function to return cullen number
-# Cn = n⋅2n + 1, with n ≥ 0. 
+ # Cn = n⋅2n + 1, with n ≥ 0. 
 def cullen_number(n):
     if n >= 0:
         return n * 2 ** n + 1
   
 
-# 89
+
 #  Write a Python function to return woodall numbers
-# n⋅2n − 1, with n ≥ 1. 
+ # n⋅2n − 1, with n ≥ 1. 
 def woodall_number(n):
     if n >= 0:
         return n * 2 ** n - 1
     
     
-# 90
+
 #  Write a Python function to return carol numbers
-# (2n − 1)**2 - 2, with n ≥ 1. 
+ # (2n − 1)**2 - 2, with n ≥ 1. 
 def carol_number(n):
     if n >= 0:
         return (2**n - 1)**2 - 2
   
 
-# 91
+
 #  Write a Python function to return star numbers
-# The nth star number is Sn = 6n(n − 1) + 1. 
+ # The nth star number is Sn = 6n(n − 1) + 1. 
 def star_number(n):
     return 6*n*(n-1)+1
     
-# 92
+
 #  Write a Python function to return stella octangula numbers
-# Stella octangula numbers: n (2n2 − 1), with n ≥ 0. 
+ # Stella octangula numbers: n (2n2 − 1), with n ≥ 0. 
 def stella_octangula_number(n):
     if n >= 0:
         return n*(2**n - 1)
     
-# 93
+
 # Write a Python function to convert Hours into Seconds
 def hours_to_seconds(hours):
     return hours * 60 * 60
 
-# 94
+
 # Write a Python function which returns the Modulo of the two given numbers.
 def mod(m, n):
     return m % n
 
-# 95
+
 # Write a Python function that finds the maximum range of a triangle's third edge, where the side lengths are all integers.
 def next_edge(side1, side2):
     return (side1+side2-1)
 
-# 96
+
 # Write a Python function that takes a list and returns the difference between the biggest and smallest numbers.
 def difference_max_min(lst):
 	return abs(min(lst) - max(lst))
 
-# 97
+
 # Write a Python function that returns the number of frames shown in a given number of minutes for a certain FPS.
 def number_of_frames(minutes, fps):
 	return (minutes * 60) * fps
 
-# 98
+
 # Write a Python function that returns True if a string is empty and False otherwise.
 def is_empty(s):
     if s == "":
@@ -14913,14 +14897,14 @@ def is_empty(s):
     else:
         return False
 
-# 99
+
 # Write a Python function that accepts a measurement value in inches and returns the equivalent in feet
 def inches_to_feet(inches):
     if inches < 12:
         return 0
     return inches/12
 
-# 100
+
 # Write a Python function that takes the age and return the age in days.
 def calc_age(age):
     calculation = age*365
@@ -16263,7 +16247,7 @@ print(larger_string('.py', 3))
 
 
 # Python program to find whether a given number (accept from the user) is even or odd, print out an appropriate
-# message to the user.
+ # message to the user.
 def check_number(num):
     mod = num % 2
     if mod > 0:
@@ -16275,8 +16259,7 @@ def check_number(num):
 print(check_number(5))
 
 
-# Given an integer, , and  space-separated integers as input, create a tuple, , of those  integers. Then compute and
-# print the result of .
+# Given an integer, , and  space-separated integers as input, create a tuple, , of those  integers. Then compute and print the result of .
 def hashing(num):
     T = tuple([int(i) for i in num.split()])
     return hash(T)
@@ -16351,8 +16334,7 @@ print(list_count_4([1, 4, 6, 7, 4]))
 print(list_count_4([1, 4, 6, 4, 7, 4]))
 
 
-# Python program to get the n (non-negative integer) copies of the first 2 characters of a given string. Return the n
-# copies of the whole string if the length is less than 2.
+# Python program to get the n (non-negative integer) copies of the first 2 characters of a given string. Return the n copies of the whole string if the length is less than 2.
 def substring_copy(str, n):
     flen = 2
     if flen > len(str):
@@ -16393,8 +16375,7 @@ def histogram(items):
 
 histogram([2, 3, 6, 5])
 
-# Python program to print out all even numbers from a given numbers list in the same order and stop the printing if
-# any numbers that come after 237 in the sequence.
+# Python program to print out all even numbers from a given numbers list in the same order and stop the printing if any numbers that come after 237 in the sequence.
 
 numbers = [
     386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
@@ -16613,7 +16594,7 @@ nums3 = [7, 8, 9]
 add_list(nums1, nums2, nums3)
 
 # Python program to create a list containing the power of said number in bases raised to the corresponding number in
-# the index using Python map
+ # the index using Python map
 
 bases_num = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 index = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -16649,7 +16630,7 @@ print(dt2, odd_product(dt2))
 
 
 # Python function that takes a positive integer and returns the sum of the cube of all the positive integers smaller
-# than the specified number.
+ # than the specified number.
 def sum_of_cubes(n):
     n -= 1
     total = 0
@@ -17006,21 +16987,21 @@ else:
 #20. Python Program to Check Armstrong Number (for 3 digits)
 num = 1634
 
-# Changed num variable to string, 
-# and calculated the length (number of digits)
+ # Changed num variable to string, 
+ # and calculated the length (number of digits)
 order = len(str(num))
 
-# initialize sum
+ # initialize sum
 sum = 0
 
-# find the sum of the cube of each digit
+ # find the sum of the cube of each digit
 temp = num
 while temp > 0:
    digit = temp % 10
    sum += digit ** order
    temp //= 10
 
-# display the result
+ # display the result
 if num == sum:
    print(num,"is an Armstrong number")
 else:
@@ -17060,15 +17041,15 @@ else:
        num -= 1
    print("The sum is", sum)
 
-#23. Python Program To Display Powers of 2 Using Anonymous Function
+
 # Display the powers of 2 using anonymous function
 
 terms = 10
 
-# Uncomment code below to take input from the user
-# terms = int(input("How many terms? "))
+ # Uncomment code below to take input from the user
+ # terms = int(input("How many terms? "))
 
-# use anonymous function
+ # use anonymous function
 result = list(map(lambda x: 2 ** x, range(terms)))
 
 print("The total terms are:",terms)
@@ -17076,13 +17057,13 @@ for i in range(terms):
    print("2 raised to power",i,"is",result[i])
 
 #24. Python Program to Find Numbers Divisible by Another Number
-# Take a list of numbers
+ # Take a list of numbers
 my_list = [12, 65, 54, 39, 102, 339, 221,]
 
-# use anonymous function to filter
+ # use anonymous function to filter
 result = list(filter(lambda x: (x % 13 == 0), my_list))
 
-# display the result
+ # display the result
 print("Numbers divisible by 13 are",result)
 
 
@@ -17196,14 +17177,14 @@ def compute_lcm(x, y):
 
 #35. Python Program to Compute LCM Using GCD
 
-# This function computes GCD 
+ # This function computes GCD 
 def compute_gcd(x, y):
 
    while(y):
        x, y = y, x % y
    return x
 
-# This function computes LCM
+ # This function computes LCM
 def compute_lcm(x, y):
    lcm = (x*y)//compute_gcd(x,y)
    return lcm
@@ -17222,19 +17203,19 @@ def print_factors(x):
 
 #37. Python Program to Make a Simple Calculator
 
-# This function adds two numbers
+ # This function adds two numbers
 def add(x, y):
     return x + y
 
-# This function subtracts two numbers
+ # This function subtracts two numbers
 def subtract(x, y):
     return x - y
 
-# This function multiplies two numbers
+ # This function multiplies two numbers
 def multiply(x, y):
     return x * y
 
-# This function divides two numbers
+ # This function divides two numbers
 def divide(x, y):
     return x / y
 
@@ -17278,7 +17259,7 @@ def recur_fibo(n):
 
 nterms = 10
 
-# check if the number of terms is valid
+ # check if the number of terms is valid
 if nterms <= 0:
    print("Plese enter a positive integer")
 else:
@@ -17294,7 +17275,7 @@ def recur_sum(n):
    else:
        return n + recur_sum(n-1)
 
-# change this value for a different result
+ # change this value for a different result
 num = 16
 
 if num < 0:
@@ -17312,7 +17293,7 @@ def recur_factorial(n):
 
 num = 7
 
-# check if the number is negative
+ # check if the number is negative
 if num < 0:
    print("Sorry, factorial does not exist for negative numbers")
 elif num == 0:
@@ -17333,7 +17314,7 @@ result = [[0,0,0],
          [0,0,0],
          [0,0,0]]
 
-# iterate through rows
+ # iterate through rows
 for i in range(len(X)):
    # iterate through columns
    for j in range(len(X[0])):
@@ -17366,7 +17347,7 @@ X = [[12,7],
 result = [[0,0,0],
          [0,0,0]]
 
-# iterate through rows
+ # iterate through rows
 for i in range(len(X)):
    # iterate through columns
    for j in range(len(X[0])):
@@ -17389,15 +17370,15 @@ for r in result:
 
 
 #44. Python Program to Multiply Two Matrices using Nested Loop
-
+ # 3x3 matrix
 X = [[12,7,3],
     [4 ,5,6],
     [7 ,8,9]]
-# 3x4 matrix
+ # 3x4 matrix
 Y = [[5,8,1,2],
     [6,7,3,0],
     [4,5,9,1]]
-# result is 3x4
+ # result is 3x4
 result = [[0,0,0,0],
          [0,0,0,0],
          [0,0,0,0]]
@@ -17417,6 +17398,7 @@ for r in result:
 
 
 #44. Python Program to Multiply Two Matrices using Nested List Comprehension
+ # 3x3 matrix
 X = [[12,7,3],
     [4 ,5,6],
     [7 ,8,9]]
@@ -17456,16 +17438,16 @@ punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
 my_str = "Hello!!!, he said ---and went."
 
-# To take input from the user
-# my_str = input("Enter a string: ")
+ # To take input from the user
+ # my_str = input("Enter a string: ")
 
-# remove punctuation from the string
+ # remove punctuation from the string
 no_punct = ""
 for char in my_str:
    if char not in punctuations:
        no_punct = no_punct + char
 
-# display the unpunctuated string
+ # display the unpunctuated string
 print(no_punct)
 
 
@@ -17473,36 +17455,36 @@ print(no_punct)
 
 my_str = "Hello this Is an Example With cased letters"
 
-# To take input from the user
-#my_str = input("Enter a string: ")
+ # To take input from the user
+ #my_str = input("Enter a string: ")
 
-# breakdown the string into a list of words
+ # breakdown the string into a list of words
 words = [word.lower() for word in my_str.split()]
 
-# sort the list
+ # sort the list
 words.sort()
 
-# display the sorted words
+ # display the sorted words
 
 print("The sorted words are:")
 for word in words:
    print(word)
 
 #48. Python Program to Illustrate Different Set Operations
-# define three sets
+ # define three sets
 E = {0, 2, 4, 6, 8};
 N = {1, 2, 3, 4, 5};
 
-# set union
+ # set union
 print("Union of E and N is",E | N)
 
-# set intersection
+ # set intersection
 print("Intersection of E and N is",E & N)
 
-# set difference
+ # set difference
 print("Difference of E and N is",E - N)
 
-# set symmetric difference
+ # set symmetric difference
 print("Symmetric difference of E and N is",E ^ N)
 
 
@@ -17512,13 +17494,13 @@ vowels = 'aeiou'
 
 ip_str = 'Hello, have you tried our tutorial section yet?'
 
-# make it suitable for caseless comparisions
+ # make it suitable for caseless comparisions
 ip_str = ip_str.casefold()
 
-# make a dictionary with each vowel a key and value 0
+ # make a dictionary with each vowel a key and value 0
 count = {}.fromkeys(vowels,0)
 
-# count the vowels
+ # count the vowels
 for char in ip_str:
    if char in count:
        count[char] += 1
@@ -17531,10 +17513,10 @@ print(count)
 
 ip_str = 'Hello, have you tried our tutorial section yet?'
 
-# make it suitable for caseless comparisions
+ # make it suitable for caseless comparisions
 ip_str = ip_str.casefold()
 
-# count the vowels
+ # count the vowels
 count = {x:sum([1 for char in ip_str if char == x]) for x in 'aeiou'}
 
 print(count)
@@ -18065,21 +18047,21 @@ else:
 #20. Python Program to Check Armstrong Number (for 3 digits)
 num = 1634
 
-# Changed num variable to string, 
-# and calculated the length (number of digits)
+ # Changed num variable to string, 
+ # and calculated the length (number of digits)
 order = len(str(num))
 
-# initialize sum
+ # initialize sum
 sum = 0
 
-# find the sum of the cube of each digit
+ # find the sum of the cube of each digit
 temp = num
 while temp > 0:
    digit = temp % 10
    sum += digit ** order
    temp //= 10
 
-# display the result
+ # display the result
 if num == sum:
    print(num,"is an Armstrong number")
 else:
@@ -18120,14 +18102,14 @@ else:
    print("The sum is", sum)
 
 #23. Python Program To Display Powers of 2 Using Anonymous Function
-# Display the powers of 2 using anonymous function
+ # Display the powers of 2 using anonymous function
 
 terms = 10
 
-# Uncomment code below to take input from the user
-# terms = int(input("How many terms? "))
+ # Uncomment code below to take input from the user
+ # terms = int(input("How many terms? "))
 
-# use anonymous function
+ # use anonymous function
 result = list(map(lambda x: 2 ** x, range(terms)))
 
 print("The total terms are:",terms)
@@ -18135,13 +18117,13 @@ for i in range(terms):
    print("2 raised to power",i,"is",result[i])
 
 #24. Python Program to Find Numbers Divisible by Another Number
-# Take a list of numbers
+ # Take a list of numbers
 my_list = [12, 65, 54, 39, 102, 339, 221,]
 
-# use anonymous function to filter
+ # use anonymous function to filter
 result = list(filter(lambda x: (x % 13 == 0), my_list))
 
-# display the result
+ # display the result
 print("Numbers divisible by 13 are",result)
 
 
@@ -18173,7 +18155,7 @@ print("The ASCII value of '" + c + "' is", ord(c))
 
 def compute_hcf(x, y):
 
-# choose the smaller number
+ # choose the smaller number
 if x > y:
     smaller = y
 else:
@@ -18192,7 +18174,7 @@ print("The H.C.F. is", compute_hcf(num1, num2))
 #30. Write a python function to find HCf or GCD and return the value
 def compute_hcf(x, y):
 
-# choose the smaller number
+ # choose the smaller number
 if x > y:
     smaller = y
 else:
@@ -18255,14 +18237,14 @@ def compute_lcm(x, y):
 
 #35. Python Program to Compute LCM Using GCD
 
-# This function computes GCD 
+ # This function computes GCD 
 def compute_gcd(x, y):
 
    while(y):
        x, y = y, x % y
    return x
 
-# This function computes LCM
+ # This function computes LCM
 def compute_lcm(x, y):
    lcm = (x*y)//compute_gcd(x,y)
    return lcm
@@ -18281,19 +18263,19 @@ def print_factors(x):
 
 #37. Python Program to Make a Simple Calculator
 
-# This function adds two numbers
+ # This function adds two numbers
 def add(x, y):
     return x + y
 
-# This function subtracts two numbers
+ # This function subtracts two numbers
 def subtract(x, y):
     return x - y
 
-# This function multiplies two numbers
+ # This function multiplies two numbers
 def multiply(x, y):
     return x * y
 
-# This function divides two numbers
+ # This function divides two numbers
 def divide(x, y):
     return x / y
 
@@ -18337,7 +18319,7 @@ def recur_fibo(n):
 
 nterms = 10
 
-# check if the number of terms is valid
+ # check if the number of terms is valid
 if nterms <= 0:
    print("Plese enter a positive integer")
 else:
@@ -18353,7 +18335,7 @@ def recur_sum(n):
    else:
        return n + recur_sum(n-1)
 
-# change this value for a different result
+ # change this value for a different result
 num = 16
 
 if num < 0:
@@ -18371,7 +18353,7 @@ def recur_factorial(n):
 
 num = 7
 
-# check if the number is negative
+ # check if the number is negative
 if num < 0:
    print("Sorry, factorial does not exist for negative numbers")
 elif num == 0:
@@ -18392,7 +18374,7 @@ result = [[0,0,0],
          [0,0,0],
          [0,0,0]]
 
-# iterate through rows
+ # iterate through rows
 for i in range(len(X)):
    # iterate through columns
    for j in range(len(X[0])):
@@ -18425,7 +18407,7 @@ X = [[12,7],
 result = [[0,0,0],
          [0,0,0]]
 
-# iterate through rows
+ # iterate through rows
 for i in range(len(X)):
    # iterate through columns
    for j in range(len(X[0])):
@@ -18448,20 +18430,20 @@ for r in result:
 
 
 #44. Python Program to Multiply Two Matrices using Nested Loop
-
+ # 3x3 matrix
 X = [[12,7,3],
     [4 ,5,6],
     [7 ,8,9]]
-# 3x4 matrix
+ # 3x4 matrix
 Y = [[5,8,1,2],
     [6,7,3,0],
     [4,5,9,1]]
-# result is 3x4
+ # result is 3x4
 result = [[0,0,0,0],
          [0,0,0,0],
          [0,0,0,0]]
 
-# iterate through rows of X
+ # iterate through rows of X
 for i in range(len(X)):
    # iterate through columns of Y
    for j in range(len(Y[0])):
@@ -18476,6 +18458,7 @@ for r in result:
 
 
 #44. Python Program to Multiply Two Matrices using Nested List Comprehension
+ # 3x3 matrix
 X = [[12,7,3],
     [4 ,5,6],
     [7 ,8,9]]
@@ -18496,13 +18479,13 @@ for r in result:
 
 my_str = 'aIbohPhoBiA'
 
-# make it suitable for caseless comparison
+ # make it suitable for caseless comparison
 my_str = my_str.casefold()
 
-# reverse the string
+ # reverse the string
 rev_str = reversed(my_str)
 
-# check if the string is equal to its reverse
+ # check if the string is equal to its reverse
 if list(my_str) == list(rev_str):
    print("The string is a palindrome.")
 else:
@@ -18515,16 +18498,16 @@ punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
 
 my_str = "Hello!!!, he said ---and went."
 
-# To take input from the user
-# my_str = input("Enter a string: ")
+ # To take input from the user
+ # my_str = input("Enter a string: ")
 
-# remove punctuation from the string
+ # remove punctuation from the string
 no_punct = ""
 for char in my_str:
    if char not in punctuations:
        no_punct = no_punct + char
 
-# display the unpunctuated string
+ # display the unpunctuated string
 print(no_punct)
 
 
@@ -18532,36 +18515,36 @@ print(no_punct)
 
 my_str = "Hello this Is an Example With cased letters"
 
-# To take input from the user
-#my_str = input("Enter a string: ")
+ # To take input from the user
+ #my_str = input("Enter a string: ")
 
-# breakdown the string into a list of words
+ # breakdown the string into a list of words
 words = [word.lower() for word in my_str.split()]
 
-# sort the list
+ # sort the list
 words.sort()
 
-# display the sorted words
+ # display the sorted words
 
 print("The sorted words are:")
 for word in words:
    print(word)
 
 #48. Python Program to Illustrate Different Set Operations
-# define three sets
+ # define three sets
 E = {0, 2, 4, 6, 8};
 N = {1, 2, 3, 4, 5};
 
-# set union
+ # set union
 print("Union of E and N is",E | N)
 
-# set intersection
+ # set intersection
 print("Intersection of E and N is",E & N)
 
-# set difference
+ # set difference
 print("Difference of E and N is",E - N)
 
-# set symmetric difference
+ # set symmetric difference
 print("Symmetric difference of E and N is",E ^ N)
 
 
@@ -18571,13 +18554,13 @@ vowels = 'aeiou'
 
 ip_str = 'Hello, have you tried our tutorial section yet?'
 
-# make it suitable for caseless comparisions
+ # make it suitable for caseless comparisions
 ip_str = ip_str.casefold()
 
-# make a dictionary with each vowel a key and value 0
+ # make a dictionary with each vowel a key and value 0
 count = {}.fromkeys(vowels,0)
 
-# count the vowels
+ # count the vowels
 for char in ip_str:
    if char in count:
        count[char] += 1
@@ -18590,22 +18573,12 @@ print(count)
 
 ip_str = 'Hello, have you tried our tutorial section yet?'
 
-# make it suitable for caseless comparisions
-ip_str = ip_str.casefold()
+ip_str = ip_str.casefold() # make it suitable for caseless comparisions
 
-# count the vowels
-count = {x:sum([1 for char in ip_str if char == x]) for x in 'aeiou'}
+count = {x:sum([1 for char in ip_str if char == x]) for x in 'aeiou'} # count the vowels
 
 print(count)
 
-# -*- coding: utf-8 -*-
-"""PythonGeneration.ipynb
-
-Automatically generated by Colaboratory.
-
-Original file is located at
-    https://colab.research.google.com/drive/10cXGL8ix2PbFMLcNlTpHdAA7GBJkQzRe
-"""
 
 # Given a string, find the length of the longest substring without repeating characters.
 str = "IshwarVenugopal"
@@ -18717,20 +18690,18 @@ final = pow(input, exponent)
 print(f'Exponent Value is:{final}')
 
 # write a program to multiply two Matrix 
-# 3x3 matrix
 X = [[12,7,3],
     [4 ,5,6],
     [7 ,8,9]]
-# 3x4 matrix
 Y = [[5,8,1,2],
     [6,7,3,0],
     [4,5,9,1]]
-# result is 3x4
+
 result = [[0,0,0,0],
          [0,0,0,0],
          [0,0,0,0]]
 
-# iterate through rows of X
+
 for i in range(len(X)):
    # iterate through columns of Y
    for j in range(len(Y[0])):
@@ -19803,8 +19774,6 @@ def TowerOfHanoi(n , source, destination, auxiliary):
 n = 4
 TowerOfHanoi(n,'A','B','C') 
 
-Python 3 program to find time for a 
-# given angle. 
   
 # 37. python function to find angle between hour hand and minute hand 
 def calcAngle(hh, mm): 
@@ -19826,7 +19795,7 @@ def calcAngle(hh, mm):
     return angle 
   
 # 38. python function to print all time when angle between hour hand and minute 
-# hand is theta 
+ # hand is theta 
 def printTime(theta): 
   
     for hh in range(0, 12): 
@@ -23020,7 +22989,6 @@ sentence = 'this is my sentence and i will write it my way'
 maxlength = 3
 result = [word for word in sentence.split(' ') if len(word) <= minlength]
 
-#### 93
 
 # write a python function that takes a list as an input and converts all numbers to positive numbers and returns the new list
 def make_all_positive(nums):
@@ -24712,10 +24680,9 @@ def convert24(str1):
 
         return str(int(str1[:2]) + 12) + str1[2:8]
 
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[7]:
+
+
 
 
 # write a python class that defines a Tree and add child
@@ -24734,7 +24701,7 @@ t = TreeNode("Arun")
 t.add_child(TreeNode("Shruthi"))
 
 
-# In[63]:
+
 
 
 # write a python function that takes two path strings and return the combined path string
@@ -24746,7 +24713,7 @@ def path_join(PARENT_DIR, DIR):
 path_join("C:/", "DATA")
 
 
-# In[78]:
+
 
 
 # write a python function to read a text file and return the result
@@ -24757,7 +24724,7 @@ def read_file(filepath='test.txt'):
 read_file()
 
 
-# In[83]:
+
 
 
 # write a python function to read a text file, if no filepath is given raise Exception
@@ -24771,7 +24738,7 @@ def read_file(filepath=None):
 read_file()
 
 
-# In[87]:
+
 
 
 # write a python program to handle exception when a given value is less than 10
@@ -24784,7 +24751,7 @@ def check(x):
 check(9)
 
 
-# In[104]:
+
 
 
 # write a python function to check if the given structure is a instance of list or dictionary
@@ -24799,7 +24766,7 @@ def check_insst(obj):
 check_insst({})
 
 
-# In[102]:
+
 
 
 # write a python function to check if the given structure is a instance of tuple or string
@@ -24813,7 +24780,7 @@ def check_inst_tup_str(obj):
 check_inst_tup_str({1})
 
 
-# In[110]:
+
 
 
 # write a python class to instantiate an object with two string attributes and write a function to return the list of attributes
@@ -24828,7 +24795,7 @@ dress = Myclass("pant","shirt")
 dress.get_attributes_list()
 
 
-# In[114]:
+
 
 
 # write a python function that call another function and that function prints "Inside B"
@@ -24841,7 +24808,7 @@ def B():
 A()
 
 
-# In[119]:
+
 
 
 # write a python program to return the biggest character in a string (printable ascii characters)
@@ -24852,7 +24819,7 @@ res = reduce(lambda x, y: x if ord(x) > ord(y) else y, input_str)
 print(f"{res}")
 
 
-# In[120]:
+
 
 
 # write a python program to adds every 3rd number in a list
@@ -24863,7 +24830,7 @@ res = reduce(lambda x, y: x+y, [i for idx, i in enumerate(input_list) if (idx+1)
 print(f"{res}")
 
 
-# In[111]:
+
 
 
 # write a python program which iterates two lists of numbers simultaneously and adds corresponding values, print the result
@@ -24873,7 +24840,7 @@ res = [f_n +s_n for f_n, s_n in zip(f_list, s_list)]
 print(f"{res}")
 
 
-# In[19]:
+
 
 
 # write a python function that takes a list of numbers and calculate square of each number and return it in a list
@@ -24882,7 +24849,7 @@ def square_num(mynumbers):
 square_num([1,2,3])
 
 
-# In[21]:
+
 
 
 # write a python function that takes two lists and combines them without any duplicates and return the list
@@ -24895,7 +24862,7 @@ L2 = [2,4,3]
 combine_lists(L1,L2)
 
 
-# In[29]:
+
 
 
 # write a python function that removes all the vowels from the given list of strings and return the list
@@ -24911,7 +24878,7 @@ def myfunc(listitems):
 myfunc(["rohan", "END"])
 
 
-# In[43]:
+
 
 
 # write a python program to print all the keys in the dictionary and store it in a list
@@ -24920,7 +24887,7 @@ key_list = list(sample_dict.keys())
 print(f"{key_list}")
 
 
-# In[45]:
+
 
 
 # write a python program to remove duplicates from a list and print the result in list
@@ -24929,7 +24896,7 @@ dedup = list(set(input_list))
 print(f"{dedup}")
 
 
-# In[46]:
+
 
 
 # write a python function that takes a list of elements and n as input, extract and append first n characters and last n characters of each string and return the resultant list
@@ -24939,7 +24906,7 @@ list1 = ["ROHAN", "END"]
 nchar(list1, 3)
 
 
-# In[56]:
+
 
 
 # write a python function that takes two parameters, first parameter is a list of dictionary and second is a list of tuples. Append the list of tuples to the list of dictionary
@@ -24951,7 +24918,7 @@ def addentry (listname, addlist):
 addentry([{'1':"A"}], [("2", "B")])
 
 
-# In[57]:
+
 
 
 # write a python function that takes a dictionary and a string, appends the string to the list of values
@@ -24962,7 +24929,6 @@ def addnames_in_dict (dictname, name):
 addnames_in_dict({"1":["A"]}, "Arun")
 
 
-# In[59]:
 
 
 # write a python program to iterate through the list and create a dictionary with integers as keys
@@ -24971,7 +24937,6 @@ dict_comp = {idx:value for idx,value in enumerate(list_)}
 print(f"{dict_comp}")
 
 
-# In[60]:
 
 
 # write a python function to add all even numbers between minimum and maximum value
@@ -24981,7 +24946,7 @@ def add_even_num(min, max):
 add_even_num(1, 6)
 
 
-# In[123]:
+
 
 
 # write a python program to iterate through a string using for loop
@@ -24993,7 +24958,7 @@ for letter in 'human':
 print(f"{h_letters}")
 
 
-# In[127]:
+
 
 
 # write a python program to iterate through a string using lambda and print the result
@@ -25001,7 +24966,7 @@ letters = list(map(lambda x: x, 'human'))
 print(letters)
 
 
-# In[129]:
+
 
 
 # write a python function to calculate the price after tax for a list of transactions
@@ -25013,7 +24978,7 @@ final_prices = list(map(get_price_with_tax, txns))
 print(f"{final_prices}")
 
 
-# In[138]:
+
 
 
 # write a python program to print python version using sys
@@ -25022,7 +24987,7 @@ import sys
 print(f"{sys.version}")
 
 
-# In[144]:
+
 
 
 # write a python program to merge two sorted lists
@@ -25034,7 +24999,6 @@ c = sorted(a)
 print(f"{c}")
 
 
-# In[146]:
 
 
 # write a python program to index every 4th character from the below string
@@ -25042,7 +25006,7 @@ code = 'varCjjlopaxntrrgnbXrOPraiiItUuUuzaQlliyaxx*t#rgiffFoce&ntPls87C!'
 code[3::4]
 
 
-# In[149]:
+
 
 
 # write a python program to split a string based on space
@@ -25051,7 +25015,6 @@ res = strin.split()
 print(f"{res}")
 
 
-# In[151]:
 
 
 # write a python program to convert a dictionary to list of tuples
@@ -25060,7 +25023,6 @@ tup = dict_new.items()
 print(list(tup))
 
 
-# In[153]:
 
 
 # write a python program to remove an element from a list
@@ -25069,15 +25031,11 @@ li.remove(1)
 li
 
 
-# In[140]:
-
 
 # write a python program to print system time
 import time
 print(f"{time.time()}")
 
-
-# In[143]:
 
 
 # write a python function to inherit a parent class person in a child class Student
@@ -25093,7 +25051,6 @@ class Student(Person):
     pass
 
 
-# In[130]:
 
 
 # write a python program to replace all the negative values to zero and keep only positive values in the list
@@ -25102,7 +25059,6 @@ prices = [i if i > 0 else 0 for i in original_prices]
 print(f"{prices}")
 
 
-# In[133]:
 
 
 # write a python function to generate random number between a  given range
@@ -25115,7 +25071,6 @@ rand_num = get_weather_data(11, 20)
 print(f"{rand_num}")
 
 
-# In[135]:
 
 
 # write a python function which uses generator to sum all the numbers in a range
@@ -25125,7 +25080,6 @@ sum_all = sum(i * i for i in range(min_value, max_value))
 print(f"{sum_all}")
 
 
-# In[126]:
 
 
 # write a python program to transpose Matrix using Nested Loops and print the result
@@ -25142,7 +25096,6 @@ for i in range(len(matrix[0])):
 print(f"{transposed}")
 
 
-# In[142]:
 
 
 # write a python function to create two threads and start and join the two threads 
@@ -25162,8 +25115,6 @@ t1.join()
 t2.join()
 
 
-# In[145]:
-
 
 # write a python function which is decorated on another function
 def myDecorator(func):
@@ -25178,16 +25129,8 @@ def myFunction(a):
 # call the decorated function
 print(myFunction('100'))
 
-# -*- coding: utf-8 -*-
-"""Assignment8_part2_python_programs.ipynb
 
-Automatically generated by Colaboratory.
-
-Original file is located at
-    https://colab.research.google.com/drive/1L3UkCJFHDkuGHoibhSFxZVESxbw0NUrz
-"""
-
-##  write a python function to convert given variable to said datatype
+# write a python function to convert given variable to said datatype
 
 def type_conversion(typ,a):
   if(typ)=='int':
@@ -25448,14 +25391,14 @@ if __name__ == '__main__':
 
 #  Write a python function to get a user name from prompt
 
-#get the username from a prompt
+ #get the username from a prompt
 username = input("Login: >> ")
 
-#list of allowed users
+ #list of allowed users
 user1 = "Ram"
 user2 = "Mohan"
 
-#control that the user belongs to the list of allowed users
+ #control that the user belongs to the list of allowed users
 if username == user1:
     print("Access granted")
 elif username == user2:
@@ -25534,16 +25477,15 @@ for i in range(0,25):
     if(i%2!=0 and i%3!=0):
         print(i)
 
-# Write a program to concatinate two strings
 
 # Python String Operations
 str1 = 'Good'
 str2 ='Morning!'
 
-# using +
+ # using +
 print('str1 + str2 = ', str1 + str2)
 
-# using *
+ # using *
 print('str1 * 3 =', str1 * 3)
 
 # Write python function to convert a given string to either lower, upper and capitalize
@@ -25605,8 +25547,7 @@ list_op(a,b,op)
 
 print(a)
 
-#!/usr/bin/env python
-# coding: utf-8
+
 
 
 
@@ -26033,20 +25974,20 @@ final = pow(input, exponent)
 print(f'Exponent Value is:{final}')
 
 # write a program to multiply two Matrix 
-# 3x3 matrix
+ # 3x3 matrix
 X = [[12,7,3],
     [4 ,5,6],
     [7 ,8,9]]
-# 3x4 matrix
+ # 3x4 matrix
 Y = [[5,8,1,2],
     [6,7,3,0],
     [4,5,9,1]]
-# result is 3x4
+ # result is 3x4
 result = [[0,0,0,0],
          [0,0,0,0],
          [0,0,0,0]]
 
-# iterate through rows of X
+ # iterate through rows of X
 for i in range(len(X)):
    # iterate through columns of Y
    for j in range(len(Y[0])):
@@ -29125,7 +29066,7 @@ def get_word(data):
     plt.show()
 
 
-# get_word(data="./christmas_carol.txt")
+ # get_word(data="./christmas_carol.txt")
 
 
 # write a python function to sort each item in a data structure on one of the keys
@@ -33399,7 +33340,6 @@ sentence = 'this is my sentence and i will write it my way'
 maxlength = 3
 result = [word for word in sentence.split(' ') if len(word) <= minlength]
 
-#### 93
 
 # write a python function that takes a list as an input and converts all numbers to positive numbers and returns the new list
 def make_all_positive(nums):
@@ -36034,7 +35974,6 @@ sentence = 'this is my sentence and i will write it my way'
 maxlength = 3
 result = [word for word in sentence.split(' ') if len(word) <= minlength]
 
-#### 93
 
 # write a python function that takes a list as an input and converts all numbers to positive numbers and returns the new list
 def make_all_positive(nums):
@@ -37509,8 +37448,7 @@ def solve(numheads,numlegs):
     return ns,ns
 
 
-# Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included).
-# The numbers obtained should be printed in a comma-separated sequence on a single line.
+# Write a program which will find all such numbers which are divisible by 7 but are not a multiple of 5, between 2000 and 3200 (both included). The numbers obtained should be printed in a comma-separated sequence on a single line.
 
 l=[]
 for i in range(2000, 3201):
@@ -37520,8 +37458,7 @@ for i in range(2000, 3201):
 print(','.join(l))
 
 
-# Write a function which can compute the factorial of a given numbers.
-# The results should be printed in a comma-separated sequence on a single line.
+# Write a function which can compute the factorial of a given numbers. The results should be printed in a comma-separated sequence on a single line.
 def fact(x):
     if x == 0:
         return 1
@@ -37562,20 +37499,6 @@ strObj = InputOutString()
 strObj.getString()
 strObj.printString()
 
-# Write a program that calculates and prints the value according to the given formula:
-# Q = Square root of [(2 * C * D)/H]
-# Following are the fixed values of C and H:
-# C is 50. H is 30.
-# D is the variable whose values should be input to your program in a comma-separated sequence.
-import math
-c=50
-h=30
-value = []
-items=[x for x in input().split(',')]
-for d in items:
-    value.append(str(int(round(math.sqrt(2*c*float(d)/h)))))
-
-print(','.join(value))
 
 # Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. The element value in the i-th row and j-th column of the array should be i*j.
 input_str = input()
@@ -38651,14 +38574,6 @@ while(n > 0):
     n = n // 10   
 print(rev)
 
-# -*- coding: utf-8 -*-
-"""Python Assignment Codes.ipynb
-
-Automatically generated by Colaboratory.
-
-Original file is located at
-    https://colab.research.google.com/github/piyushjain220/TSAI/blob/main/NLP/Session8/Python_Assignment_Codes.ipynb
-"""
 
 # Given a string, find the length of the longest substring without repeating characters.
 str = "akshayjain"
@@ -38767,20 +38682,20 @@ final = pow(input, exponent)
 print(f'Exponent Value is:{final}')
 
 # write a program to multiply two Matrix 
-# 3x3 matrix
+ # 3x3 matrix
 X = [[12,7,3],
     [4 ,5,6],
     [7 ,8,9]]
-# 3x4 matrix
+ # 3x4 matrix
 Y = [[5,8,1,2],
     [6,7,3,0],
     [4,5,9,1]]
-# result is 3x4
+ # result is 3x4
 result = [[0,0,0,0],
          [0,0,0,0],
          [0,0,0,0]]
 
-# iterate through rows of X
+ # iterate through rows of X
 for i in range(len(X)):
    # iterate through columns of Y
    for j in range(len(Y[0])):
@@ -40472,7 +40387,6 @@ st = "Nitin"
 print(is_palindrome(st))
 
 
-# coding: utf-8
 
 # write a python program to add two numbers  
 num1 = 5465461
