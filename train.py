@@ -2,13 +2,28 @@ from model import *
 
 # Training the model
 NUM_EPOCHS = 50
+train_loss_data = []
+val_loss_data = []
+train_acc_data = []
+val_acc_data = []    
+
 model.load_state_dict(torch.load('model.pth'))
-for epoch in range(1,NUM_EPOCHS+1):
+for epoch in range(NUM_EPOCHS):
     start_time = timer()
-    train_loss = train_epoch(model, optimizer)
+    train_loss,train_acc = train_epoch(model, optimizer)
+    train_loss_data.append(train_loss)
+    train_acc_data.append(train_acc)
     end_time = timer()
-    val_loss = evaluate(model)
-    print(f'Epoch: {epoch}, Train loss: {train_loss:.3f}, Val loss: {val_loss:.3f}', flush=True)
+    val_loss,val_acc = evaluate(model)
+    val_loss_data.append(val_loss)
+    val_acc_data.append(val_acc)
+    print(f'Epoch: {epoch+1}\n Train loss: {train_loss:.3f}, Train Acc: {train_acc}\n Val loss: {val_loss:.3f}, Val Acc: {val_acc}', flush=True)
     print(f'Epoch time: {(end_time - start_time):.3f}s', flush=True)
     
 torch.save(model.state_dict(), 'model.pth')
+plt.plot(range(1, NUM_EPOCHS+1), train_loss_data, label='Train Loss')
+plt.plot(range(1, NUM_EPOCHS+1), val_loss_data, label='Val Loss')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.legend()
+plt.show()

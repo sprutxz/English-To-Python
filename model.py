@@ -222,7 +222,7 @@ def train_epoch(model,optimizer):
     # Setting the model to training mode
     model.train()
     losses = 0
-
+    acc = []
     # Preparing the data
     X,y = collate_fn(training)
     training_dataset = TensorDataset(X,y)
@@ -237,6 +237,16 @@ def train_epoch(model,optimizer):
         # Getting the masks
         src_mask, tgt_mask, src_padding_mask, tgt_padding_mask = create_mask(src, tgt_in)
         logits = model(src,tgt_in, src_mask, tgt_mask, src_padding_mask,tgt_padding_mask,src_padding_mask) # memory is the encoder outputs
+        tgt_out = tgt[:,1:]
+        
+        _, predicted_tokens = torch.max(logits, dim=2)
+        correct = (predicted_tokens == tgt_out).sum().item() # Calculate the number of correct predictions
+        
+        total = tgt_out.numel() # Calculate the total number of predictions
+        acc_score = correct / total
+        acc.append(acc_score)
+        
+        
 
         optimizer.zero_grad()
         tgt_out = tgt[:,1:]
@@ -246,13 +256,17 @@ def train_epoch(model,optimizer):
 
         optimizer.step()
         losses += loss.item()
+    
+    loss_var = losses / len(list(train_dataloader))
+    accuracy = sum(acc)/len(acc)
 
-    return losses / len(list(train_dataloader)) # Getting the average loss per example
+    return loss_var,accuracy # Getting the average loss per example
 
 # Evaluation Loop
 def evaluate(model):
     model.eval()
     losses = 0
+    acc = []
 
     # Preparing the data
     X,y = collate_fn(testing)
@@ -269,11 +283,23 @@ def evaluate(model):
         # Getting the masks
         src_mask, tgt_mask, src_padding_mask, tgt_padding_mask = create_mask(src, tgt_input)
         logits = model(src,tgt_input, src_mask, tgt_mask, src_padding_mask,tgt_padding_mask,src_padding_mask) # memory is the encoder outputs
-        
         tgt_out = tgt[:,1:]
+        
+        _, predicted_tokens = torch.max(logits, dim=2)
+
+        correct = (predicted_tokens == tgt_out).sum().item() # Calculate the number of correct predictions
+        
+        total = tgt_out.numel() # Calculate the total number of predictions
+        acc_score = correct / total
+        acc.append(acc_score)
+        
         logits = logits.permute(0,2,1)
         
         loss = loss_fn(logits,tgt_out)
         losses += loss.item()
+    
+    loss_var = losses / len(list(val_dataloader))
+    accuracy = sum(acc)/len(acc)
 
-    return losses / len(list(val_dataloader)) # Getting the average loss per example
+    return loss_var, accuracy # Getting the average loss per example
+
