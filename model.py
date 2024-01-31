@@ -194,7 +194,7 @@ def collate_fn(batch):
     tgt_batch = pad_sequence(tgt_batch, padding_value=PAD_IDX)
     return src_batch.T, tgt_batch.T
 
-transformer = Seq2SeqTransformer(NUM_ENCODER_LAYERS, 
+model = Seq2SeqTransformer(NUM_ENCODER_LAYERS, 
                                  NUM_DECODER_LAYERS, 
                                  EMB_SIZE, 
                                  NHEAD, 
@@ -203,7 +203,7 @@ transformer = Seq2SeqTransformer(NUM_ENCODER_LAYERS,
                                  FFN_HID_DIM).to(DEVICE) # Creating the model
 
 # Setting the parameters using the xavier uniform distribution
-for p in transformer.parameters():
+for p in model.parameters():
     if p.dim() > 1:
         nn.init.xavier_uniform_(p)
 
@@ -211,7 +211,7 @@ for p in transformer.parameters():
 loss_fn = nn.CrossEntropyLoss(ignore_index=PAD_IDX)
 
 # Defining the optimizer
-optimizer = optim.AdamW(transformer.parameters(),lr=0.0001)
+optimizer = optim.AdamW(model.parameters(),lr=0.0001)
 
 train_size = int(len(dataset)*0.8)
 test_size = len(dataset) - train_size
