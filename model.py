@@ -35,6 +35,7 @@ trg_emb = gensim.models.Word2Vec.load("tgt_emb.model") # Loading the target lang
 SRC_LANGUAGE = 'en'
 TGT_LANGUAGE = 'python'
 UNK_IDX, PAD_IDX, SOS_IDX, EOS_IDX = 0, 1, 2, 3 # Tokens for Unknown, Padding, start of sentence, end of sentence
+special_tokens = ['<unk>', '<pad>', '<sos>', '<eos>']
 vocabularies = {}
 
 vocabularies[SRC_LANGUAGE] = vocab(src_emb.wv.key_to_index, min_freq=0) # Creating a vocabulary for the source language
@@ -91,11 +92,11 @@ class TokenEmbedding(nn.Module):
     def __init__(self, vocab_size: int, emb_size: int, word2vec_model_path: str):
         super().__init__()
         self.word2vec_model = gensim.models.Word2Vec.load(word2vec_model_path)
-        self.embedding = nn.Embedding(vocab_size+4, emb_size)
+        self.embedding = nn.Embedding(vocab_size+len(special_tokens), emb_size)
         self.embed_size = emb_size
 
         # Initialize the embedding weights with the Word2Vec vectors
-        self.embedding.weight.data[4:].copy_(torch.from_numpy(self.word2vec_model.wv.vectors))
+        self.embedding.weight.data[len(special_tokens):].copy_(torch.from_numpy(self.word2vec_model.wv.vectors))
 
     def forward(self, tokens: Tensor):
         return self.embedding(tokens.long()) * math.sqrt(self.embed_size)
