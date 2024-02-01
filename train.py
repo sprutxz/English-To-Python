@@ -1,13 +1,16 @@
 from model import *
+import os
 
 # Training the model
-NUM_EPOCHS = 50
+NUM_EPOCHS = 200
 train_loss_data = []
 val_loss_data = []
 train_acc_data = []
 val_acc_data = []    
 
-model.load_state_dict(torch.load('model.pth'))
+if os.path.exists('model.pth'):
+    model.load_state_dict(torch.load('model.pth'))
+    
 for epoch in range(NUM_EPOCHS):
     start_time = timer()
     train_loss,train_acc = train_epoch(model, optimizer)
@@ -26,4 +29,5 @@ plt.plot(range(1, NUM_EPOCHS+1), val_loss_data, label='Val Loss')
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.legend()
-plt.show()
+plt.show(block=True)
+plt.savefig('loss.png')
