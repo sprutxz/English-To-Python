@@ -1,3 +1,4 @@
+Remove utf-8 from vocab
 make a better way to check for loops
 check if the target tokens are right
 better word embeddings
