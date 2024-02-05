@@ -38,8 +38,8 @@ UNK_IDX, PAD_IDX, SOS_IDX, EOS_IDX = 0, 1, 2, 3 # Tokens for Unknown, Padding, s
 special_tokens = ['<unk>', '<pad>', '<sos>', '<eos>']
 vocabularies = {}
 
-vocabularies[SRC_LANGUAGE] = vocab(src_emb.wv.key_to_index, min_freq=0) # Creating a vocabulary for the source language
-vocabularies[TGT_LANGUAGE] = vocab(trg_emb.wv.key_to_index, min_freq=0) # Creating a vocabulary for the target language
+vocabularies[SRC_LANGUAGE] = vocab(src_emb.wv.key_to_index, min_freq=0, specials=special_tokens, special_first=True) # Creating a vocabulary for the source language
+vocabularies[TGT_LANGUAGE] = vocab(trg_emb.wv.key_to_index, min_freq=0, specials=special_tokens, special_first=True) # Creating a vocabulary for the target language
 for ln in [SRC_LANGUAGE, TGT_LANGUAGE]:
     vocabularies[ln].set_default_index(UNK_IDX)
         
@@ -92,7 +92,7 @@ class TokenEmbedding(nn.Module):
     def __init__(self, vocab_size: int, emb_size: int, word2vec_model_path: str):
         super().__init__()
         self.word2vec_model = gensim.models.Word2Vec.load(word2vec_model_path)
-        self.embedding = nn.Embedding(vocab_size+len(special_tokens), emb_size)
+        self.embedding = nn.Embedding(vocab_size, emb_size)
         self.embed_size = emb_size
 
         # Initialize the embedding weights with the Word2Vec vectors
