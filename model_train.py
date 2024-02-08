@@ -10,7 +10,7 @@ val_acc_data = []
 
 if os.path.exists('model.pth'):
     model.load_state_dict(torch.load('model.pth'))
-    
+print(sum(p.numel() for p in model.parameters() if p.requires_grad))    
 for epoch in range(NUM_EPOCHS):
     start_time = timer()
     train_loss,train_acc = train_epoch(model, optimizer)
