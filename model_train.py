@@ -2,7 +2,7 @@ from model import *
 import os
 
 # Training the model
-NUM_EPOCHS = 200
+NUM_EPOCHS = 400
 train_loss_data = []
 val_loss_data = []
 train_acc_data = []
@@ -10,7 +10,7 @@ val_acc_data = []
 
 if os.path.exists('model.pth'):
     model.load_state_dict(torch.load('model.pth'))
-print(sum(p.numel() for p in model.parameters() if p.requires_grad))    
+print(sum(p.numel() for p in model.parameters()))    
 for epoch in range(NUM_EPOCHS):
     start_time = timer()
     train_loss,train_acc = train_epoch(model, optimizer)

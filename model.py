@@ -15,12 +15,13 @@ from torch.nn.utils.rnn import pad_sequence
 import torch.optim as optim
 from torch.utils.data import TensorDataset, DataLoader, random_split
 from torchtext.data import get_tokenizer
-from torchtext.vocab import build_vocab_from_iterator, vocab
+from torchtext.vocab import vocab
 import gensim
 from gensim.models import Word2Vec
 from tokenize import tokenize, untokenize
 import io
 import re
+from nltk.translate.bleu_score import sentence_bleu
 #from nltk.stem import PorterStemmer
 
 # Setting the device for model
@@ -47,7 +48,7 @@ for ln in [SRC_LANGUAGE, TGT_LANGUAGE]:
 def tgt_tokenizer(python_code_str):
     python_tokens = list(tokenize(io.BytesIO(python_code_str.encode('utf-8')).readline))
     tokenized_output = []
-    for i in range(0, len(python_tokens)):
+    for i in range(1, len(python_tokens)):
         tokenized_output.append(python_tokens[i].string)
     return tokenized_output
 
@@ -61,11 +62,11 @@ tokenizers[TGT_LANGUAGE] = tgt_tokenizer # Creating a tokenizer for the target l
 SRC_VOCAB_SIZE = len(vocabularies[SRC_LANGUAGE])
 TGT_VOCAB_SIZE = len(vocabularies[TGT_LANGUAGE])
 EMB_SIZE = src_emb.wv.vectors.shape[-1]
-NHEAD = 4
+NHEAD = 8
 FFN_HID_DIM = 128
 BATCH_SIZE = 16
-NUM_ENCODER_LAYERS = 3
-NUM_DECODER_LAYERS = 3
+NUM_ENCODER_LAYERS = 8
+NUM_DECODER_LAYERS = 8
 
   
 # Positional Encoding module -> this class is the positional encoder (see above for details)
@@ -97,7 +98,8 @@ class TokenEmbedding(nn.Module):
 
         # Initialize the embedding weights with the Word2Vec vectors
         self.embedding.weight.data[len(special_tokens):].copy_(torch.from_numpy(self.word2vec_model.wv.vectors))
-
+        self.embedding.weight.requires_grad = False
+        
     def forward(self, tokens: Tensor):
         return self.embedding(tokens.long()) * math.sqrt(self.embed_size)
     
@@ -108,7 +110,7 @@ class Seq2SeqTransformer(nn.Module):
                  emb_size:int, nhead:int, 
                  src_vocab_size:int, 
                  tgt_vocab_size:int, 
-                 dim_feedforward: int=512, 
+                 dim_feedforward: int=2048, 
                  dropout:float = 0.1):
         super().__init__()
         self.transformer = Transformer(d_model=emb_size, 
@@ -224,7 +226,7 @@ for p in model.parameters():
 loss_fn = nn.CrossEntropyLoss(ignore_index=PAD_IDX)
 
 # Defining the optimizer
-optimizer = optim.AdamW(model.parameters(),lr=0.0001)
+optimizer = optim.Adam(model.parameters(),lr=0.0001)
 
 train_size = int(len(dataset)*0.8)
 test_size = len(dataset) - train_size
@@ -252,7 +254,9 @@ def train_epoch(model,optimizer):
         logits = model(src,tgt_in, src_mask, tgt_mask, src_padding_mask,tgt_padding_mask,src_padding_mask) # memory is the encoder outputs
         tgt_out = tgt[:,1:]
         
-        _, predicted_tokens = torch.max(logits, dim=2)
+        
+        prob = nn.functional.softmax(logits,dim=2)
+        _, predicted_tokens = torch.max(prob, dim=2)
         correct = (predicted_tokens == tgt_out).sum().item() # Calculate the number of correct predictions
         
         total = tgt_out.numel() # Calculate the total number of predictions
@@ -298,7 +302,8 @@ def evaluate(model):
         logits = model(src,tgt_input, src_mask, tgt_mask, src_padding_mask,tgt_padding_mask,src_padding_mask) # memory is the encoder outputs
         tgt_out = tgt[:,1:]
         
-        _, predicted_tokens = torch.max(logits, dim=2)
+        prob = nn.functional.softmax(logits,dim=2)
+        _, predicted_tokens = torch.max(prob, dim=2)
 
         correct = (predicted_tokens == tgt_out).sum().item() # Calculate the number of correct predictions
         
