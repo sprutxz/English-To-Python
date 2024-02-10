@@ -21,7 +21,7 @@ from gensim.models import Word2Vec
 from tokenize import tokenize, untokenize
 import io
 import re
-from nltk.translate.bleu_score import sentence_bleu
+#from nltk.translate.bleu_score import sentence_bleu
 #from nltk.stem import PorterStemmer
 
 # Setting the device for model
@@ -226,7 +226,7 @@ for p in model.parameters():
 loss_fn = nn.CrossEntropyLoss(ignore_index=PAD_IDX)
 
 # Defining the optimizer
-optimizer = optim.Adam(model.parameters(),lr=0.0001)
+optimizer = optim.Adam(model.parameters(),lr=0.0005)
 
 train_size = int(len(dataset)*0.8)
 test_size = len(dataset) - train_size

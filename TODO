@@ -1,6 +1,5 @@
-Remove utf-8 from vocab
-make a better way to check for loops
-check if the target tokens are right
+set up smooth_eps for loss function
+
 better word embeddings
 
 Set up METEOR metric

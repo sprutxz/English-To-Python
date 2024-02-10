@@ -69,4 +69,4 @@ def translate(model: torch.nn.Module, src_sentence: str):
     return " ".join(vocabularies[TGT_LANGUAGE].lookup_tokens(list(tgt_tokens.cpu().numpy()))).replace("<sos>", "").replace("<eos>", "")
 
 # Trying to translate from English to Python
-print(translate(model, "write a python program to add two numbers"))
+print(translate(model, "write a program to find and print the largest among three numbers"))
