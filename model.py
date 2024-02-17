@@ -61,12 +61,12 @@ tokenizers[TGT_LANGUAGE] = tgt_tokenizer # Creating a tokenizer for the target l
 #defininting the model parameters
 SRC_VOCAB_SIZE = len(vocabularies[SRC_LANGUAGE])
 TGT_VOCAB_SIZE = len(vocabularies[TGT_LANGUAGE])
-EMB_SIZE = src_emb.wv.vectors.shape[-1]
-NHEAD = 8
-FFN_HID_DIM = 128
-BATCH_SIZE = 16
-NUM_ENCODER_LAYERS = 8
-NUM_DECODER_LAYERS = 8
+EMB_SIZE = 256
+NHEAD = 6
+FFN_HID_DIM = 1024
+BATCH_SIZE = 8
+NUM_ENCODER_LAYERS = 4
+NUM_DECODER_LAYERS = 4
 
   
 # Positional Encoding module -> this class is the positional encoder (see above for details)
@@ -89,19 +89,29 @@ class PositionalEncoding(nn.Module):
     def forward(self,token_embedding: Tensor):
         return self.dropout(token_embedding + self.pos_embedding[:token_embedding.size(0), :])
 
-class TokenEmbedding(nn.Module):
-    def __init__(self, vocab_size: int, emb_size: int, word2vec_model_path: str):
-        super().__init__()
-        self.word2vec_model = gensim.models.Word2Vec.load(word2vec_model_path)
-        self.embedding = nn.Embedding(vocab_size, emb_size)
-        self.embed_size = emb_size
+# class TokenEmbedding(nn.Module):
+#     def __init__(self, vocab_size: int, emb_size: int, word2vec_model_path: str):
+#         super().__init__()
+#         self.word2vec_model = gensim.models.Word2Vec.load(word2vec_model_path)
+#         self.embedding = nn.Embedding(vocab_size, emb_size)
+#         self.embed_size = emb_size
 
-        # Initialize the embedding weights with the Word2Vec vectors
-        self.embedding.weight.data[len(special_tokens):].copy_(torch.from_numpy(self.word2vec_model.wv.vectors))
-        self.embedding.weight.requires_grad = False
+#         # Initialize the embedding weights with the Word2Vec vectors
+#         self.embedding.weight.data[len(special_tokens):].copy_(torch.from_numpy(self.word2vec_model.wv.vectors))
+#         self.embedding.weight.requires_grad = False
         
-    def forward(self, tokens: Tensor):
-        return self.embedding(tokens.long()) * math.sqrt(self.embed_size)
+#     def forward(self, tokens: Tensor):
+#         return self.embedding(tokens.long()) * math.sqrt(self.embed_size)
+    
+# Converting the tokens into embeddings
+class TokenEmbedding(nn.Module):
+  def __init__(self,vocab_size: int, emb_size):
+    super(TokenEmbedding, self).__init__()
+    self.embedding = nn.Embedding(vocab_size,emb_size)
+    self.embed_size = emb_size
+
+  def forward(self,tokens:Tensor):
+    return self.embedding(tokens.long()) * math.sqrt(self.embed_size)
     
     
 class Seq2SeqTransformer(nn.Module):
@@ -122,8 +132,8 @@ class Seq2SeqTransformer(nn.Module):
                                        batch_first=True)
         
         self.generator = nn.Linear(emb_size,tgt_vocab_size) # A layer to convert the matrix (seq_len, emb_size) to (seq_len, tgt_vocab_size)
-        self.src_tok_emb = TokenEmbedding(src_vocab_size, emb_size, "src_emb.model")
-        self.tgt_tok_emb = TokenEmbedding(tgt_vocab_size,emb_size, "tgt_emb.model")
+        self.src_tok_emb = TokenEmbedding(src_vocab_size, emb_size)
+        self.tgt_tok_emb = TokenEmbedding(tgt_vocab_size,emb_size)
 
         # Getting the positional encodings
         self.positional_encoding = PositionalEncoding(emb_size,dropout=dropout)
@@ -196,13 +206,11 @@ def collate_fn(batch):
     # Iterating through the questions
     for X in batch.dataset['question'].values:
         token_tensor = text_transform[SRC_LANGUAGE](X.strip('\n\t'))
-        #token_tensor = token_tensor[:-1]
         src_batch.append(token_tensor)
 
     # Iterating through the solutions
     for y in batch.dataset['solution'].values:
         token_tensor = text_transform[TGT_LANGUAGE](y.strip('\n\t'))
-        #token_tensor = token_tensor[:-1]
         tgt_batch.append(token_tensor)
 
     src_batch = pad_sequence(src_batch, padding_value=PAD_IDX)
@@ -223,10 +231,10 @@ for p in model.parameters():
         nn.init.xavier_uniform_(p)
 
 # Defining the loss function
-loss_fn = nn.CrossEntropyLoss(ignore_index=PAD_IDX)
+loss_fn = nn.CrossEntropyLoss(ignore_index=PAD_IDX, label_smoothing=0.1)
 
 # Defining the optimizer
-optimizer = optim.Adam(model.parameters(),lr=0.0005)
+optimizer = optim.AdamW(model.parameters(),lr=0.000001)
 
 train_size = int(len(dataset)*0.8)
 test_size = len(dataset) - train_size

@@ -1,6 +1,0 @@
-set up smooth_eps for loss function
-
-better word embeddings
-
-Set up METEOR metric
-Update model eval to beam search

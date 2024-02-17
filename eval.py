@@ -1,7 +1,7 @@
 from model import *
 import heapq
 
-model.load_state_dict(torch.load('model.pth'))
+model.load_state_dict(torch.load('model_alt.pth'))
 
 # A function to generate the output sequence autoregressively using the greedy decoder algorithm
 # Usually, we would utilize something like beam search
@@ -65,8 +65,8 @@ def translate(model: torch.nn.Module, src_sentence: str):
     model.eval()
     src = text_transform[SRC_LANGUAGE](src_sentence).view(-1, 1)
     num_tokens = src.shape[0]
-    tgt_tokens = beam_search_decode(model,  src, max_len=num_tokens + 5, start_symbol=SOS_IDX, beam_width=10).flatten()
+    tgt_tokens = beam_search_decode(model,  src, max_len=num_tokens + 5, start_symbol=SOS_IDX, beam_width=20).flatten()
     return " ".join(vocabularies[TGT_LANGUAGE].lookup_tokens(list(tgt_tokens.cpu().numpy()))).replace("<sos>", "").replace("<eos>", "")
 
 # Trying to translate from English to Python
-print(translate(model, "write a program to find and print the largest among three numbers"))
+print(translate(model, "write a python program to add two numbers "))
