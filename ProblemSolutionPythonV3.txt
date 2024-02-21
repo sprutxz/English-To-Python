@@ -828,7 +828,7 @@ print(first_repeated_char_smallest_distance("abcabc"))
 print(first_repeated_char_smallest_distance("abcb"))
 print(first_repeated_char_smallest_distance("abcc"))
 print(first_repeated_char_smallest_distance("abcxxy"))
-print(first_repeated_char_smallest_distance("abc"))))
+print(first_repeated_char_smallest_distance("abc"))
 
 
 PROBLEM:
@@ -850,9 +850,9 @@ def sql_connection():
  
 def sql_table(conn):
    cursorObj = conn.cursor()
-# Create the table
+   # Create the table
    cursorObj.execute("CREATE TABLE salesman(salesman_id n(5), name char(30), city char(35), commission decimal(7,2));")
-# Insert records
+   # Insert records
    cursorObj.executescript("""
    INSERT INTO salesman VALUES(5001,'James Hoog', 'New York', 0.15);
    INSERT INTO salesman VALUES(5002,'Nail Knite', 'Paris', 0.25);
@@ -1360,25 +1360,25 @@ Write a Python program to remove duplicates from Dictionary.
 PYTHON CODE:
 
 student_data = {'id1': 
-   {'name': ['Sara'], 
-    'class': ['V'], 
-    'subject_integration': ['english, math, science']
-   },
- 'id2': 
-  {'name': ['David'], 
-    'class': ['V'], 
-    'subject_integration': ['english, math, science']
-   },
- 'id3': 
-    {'name': ['Sara'], 
-    'class': ['V'], 
-    'subject_integration': ['english, math, science']
-   },
- 'id4': 
-   {'name': ['Surya'], 
-    'class': ['V'], 
-    'subject_integration': ['english, math, science']
-   },
+                {'name': ['Sara'], 
+                    'class': ['V'], 
+                    'subject_integration': ['english, math, science']
+                },
+                'id2': 
+                {'name': ['David'], 
+                    'class': ['V'], 
+                    'subject_integration': ['english, math, science']
+                },
+                'id3': 
+                    {'name': ['Sara'], 
+                    'class': ['V'], 
+                    'subject_integration': ['english, math, science']
+                },
+                'id4': 
+                {'name': ['Surya'], 
+                    'class': ['V'], 
+                    'subject_integration': ['english, math, science']
+                },
 }
 
 result = {}
@@ -1918,10 +1918,10 @@ numbers = (1, 2, 3, 4, 5, 6, 7, 8, 9) # Declaring the tuple
 count_odd = 0
 count_even = 0
 for x in numbers:
-        if not x % 2:
-    	     count_even+=1
-        else:
-    	     count_odd+=1
+    if not x % 2:
+        count_even+=1
+    else:
+        count_odd+=1
 print("Number of even numbers :",count_even)
 print("Number of odd numbers :",count_odd)
 
@@ -3886,9 +3886,9 @@ def sql_connection():
      print(Error)
 def sql_table(conn):
    cursorObj = conn.cursor()
-# Create the table
+   # Create the table
    cursorObj.execute("CREATE TABLE salesman(salesman_id n(5), name char(30), city char(35), commission decimal(7,2));")
-# Insert records
+   # Insert records
    cursorObj.executescript("""
    INSERT INTO salesman VALUES(5001,'James Hoog', 'New York', 0.15);
    INSERT INTO salesman VALUES(5002,'Nail Knite', 'Paris', 0.25);
@@ -3916,8 +3916,8 @@ def sql_table(conn):
 sqllite_conn = sql_connection()
 sql_table(sqllite_conn)
 if (sqllite_conn):
- sqllite_conn.close()
- print("\nThe SQLite connection is closed.")
+  sqllite_conn.close()
+  print("\nThe SQLite connection is closed.")
 
 
 PROBLEM:
@@ -4996,7 +4996,7 @@ def smallest_largest_words(str1):
           
     small = large = all_words[0];  
    
-#Find smallest and largest word in the str1  
+    #Find smallest and largest word in the str1  
     for k in range(0, len(all_words)):
         if(len(small) > len(all_words[k])):
             small = all_words[k];
@@ -5556,7 +5556,7 @@ def sql_connection():
  
 def sql_table(conn):
    cursorObj = conn.cursor()
-# Create two tables
+   # Create two tables
    cursorObj.execute("CREATE TABLE agent_master(agent_code char(6),agent_name char(40),working_area char(35),commission decimal(10,2),phone_no char(15) NULL);")
    cursorObj.execute("CREATE TABLE temp_agent_master(agent_code char(6),agent_name char(40),working_area char(35),commission decimal(10,2),phone_no char(15) NULL);")
    print("List of tables:")
@@ -8605,12 +8605,12 @@ def sql_connection():
  
 def sql_table(conn):
     cursorObj = conn.cursor()
-# Create the table
+    # Create the table
     cursorObj.execute("CREATE TABLE salesman(salesman_id n(5), name char(30), city char(35), commission decimal(7,2));")
     print("Number of records before inserting rows:")
     cursor = cursorObj.execute('select * from salesman;')
     print(len(cursor.fetchall()))
-# Insert records
+    # Insert records
     cursorObj.executescript("""
     INSERT INTO salesman VALUES(5001,'James Hoog', 'New York', 0.15);
     INSERT INTO salesman VALUES(5002,'Nail Knite', 'Paris', 0.25);
@@ -9643,9 +9643,9 @@ def sql_connection():
       print(Error) 
 def sql_table(conn):
     cursorObj = conn.cursor()
-# Create the table
+    # Create the table
     cursorObj.execute("CREATE TABLE salesman(salesman_id n(5), name char(30), city char(35), commission decimal(7,2));")
-# Insert records
+    # Insert records
     cursorObj.executescript("""
     INSERT INTO salesman VALUES(5001,'James Hoog', 'New York', 0.15);
     INSERT INTO salesman VALUES(5002,'Nail Knite', 'Paris', 0.25);
@@ -16710,7 +16710,7 @@ def sql_connection():
  
 def sql_table(conn, rows):
     cursorObj = conn.cursor()
-# Create the table
+    # Create the table
     cursorObj.execute("CREATE TABLE salesman(salesman_id n(5), name char(30), city char(35), commission decimal(7,2));")
     sqlite_insert_query = """INSERT INTO salesman
                           (salesman_id, name, city, commission) 
@@ -17784,9 +17784,9 @@ def sql_connection():
       print(Error) 
 def sql_table(conn):
     cursorObj = conn.cursor()
-# Create the table
+    # Create the table
     cursorObj.execute("CREATE TABLE salesman(salesman_id n(5), name char(30), city char(35), commission decimal(7,2));")
-# Insert records
+    # Insert records
     cursorObj.executescript("""
     INSERT INTO salesman VALUES(5001,'James Hoog', 'New York', 0.15);
     INSERT INTO salesman VALUES(5002,'Nail Knite', 'Paris', 0.25);
@@ -24472,15 +24472,13 @@ DEBUG = False # like the built-in __debug__
 def spermutations(n):
     """permutations by swapping. Yields: perm, sign"""
     sign = 1
-    p = [[i, 0 if i == 0 else -1] # [num, direction]
-         for i in range(n)]
+    p = [[i, 0 if i == 0 else -1] for i in range(n)]
  
     if DEBUG: print(' #', p)
     yield tuple(pp[0] for pp in p), sign
  
     while any(pp[1] for pp in p): # moving
-        i1, (n1, d1) = max(((i, pp) for i, pp in enumerate(p) if pp[1]),
-                           key=itemgetter(1))
+        i1, (n1, d1) = max(((i, pp) for i, pp in enumerate(p) if pp[1]), key=itemgetter(1))
         sign *= -1
         if d1 == -1:
             # Swap down

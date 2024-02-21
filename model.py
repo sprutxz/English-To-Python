@@ -29,20 +29,16 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 dataset = pd.read_csv('dataset.csv') #loading the dataset
 
-src_emb = gensim.models.Word2Vec.load("src_emb.model") # Loading the source language model
-trg_emb = gensim.models.Word2Vec.load("tgt_emb.model") # Loading the target language model
 
 # Creating dictionaries for the tokenizers and the vocabularies
 SRC_LANGUAGE = 'en'
 TGT_LANGUAGE = 'python'
 UNK_IDX, PAD_IDX, SOS_IDX, EOS_IDX = 0, 1, 2, 3 # Tokens for Unknown, Padding, start of sentence, end of sentence
-special_tokens = ['<unk>', '<pad>', '<sos>', '<eos>']
 vocabularies = {}
 
-vocabularies[SRC_LANGUAGE] = vocab(src_emb.wv.key_to_index, min_freq=0, specials=special_tokens, special_first=True) # Creating a vocabulary for the source language
-vocabularies[TGT_LANGUAGE] = vocab(trg_emb.wv.key_to_index, min_freq=0, specials=special_tokens, special_first=True) # Creating a vocabulary for the target language
-for ln in [SRC_LANGUAGE, TGT_LANGUAGE]:
-    vocabularies[ln].set_default_index(UNK_IDX)
+vocabularies[SRC_LANGUAGE] = torch.load('src_vocab.pth')
+vocabularies[TGT_LANGUAGE] = torch.load('tgt_vocab.pth')
+
         
 #custom tokenizer for python code
 def tgt_tokenizer(python_code_str):
@@ -249,6 +245,7 @@ def train_epoch(model,optimizer):
     # Preparing the data
     X,y = collate_fn(training)
     training_dataset = TensorDataset(X,y)
+    torch.save(training_dataset, 'training_dataset.pth')
     train_dataloader = DataLoader(training_dataset, batch_size=BATCH_SIZE)
 
     # Iterating through the data
